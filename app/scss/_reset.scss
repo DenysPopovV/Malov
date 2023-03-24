@@ -53,7 +53,10 @@ input,
 button,
 textarea,
 select {
+    cursor: pointer;
     outline: transparent;
     font: inherit;
     border: inset;
+    background-color: transparent;
+    border: transparent;
 }
