@@ -7,6 +7,14 @@
         align-items: center;
     }
 
+    &__logo {
+        img{
+            width: 143px;
+            height: 49px;
+            object-fit: cover;
+        }
+    }
+
     &__menu-list {
         display: flex;
         align-items: center;

@@ -1,0 +1,175 @@
+.footer {
+    width: 100%;
+    height: 420px;
+    background-color: $footer-bg;
+    color: $white;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        max-width: 850px;
+        width: 100%;
+        padding-top: 27px;
+    }
+
+    &__logo {
+        display: block;
+        margin-bottom: 32px;
+
+        img {
+            width: 277px;
+            height: 85px;
+            object-fit: cover;
+        }
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 30px;
+        height: 260px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__icons {
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+
+    &__icons-item {
+        position: relative;
+        width: 43px;
+        height: 43px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 41px;
+            height: 41px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &--inst::after {
+            background-image: url('../images/sprite.svg#inst');
+        }
+
+        &--up::after {
+            background-image: url('../images/sprite.svg#tabler_brand-upwork');
+        }
+    }
+
+    &__author {
+        text-align: center;
+        font-size: 13px;
+        line-height: 16px;
+        padding-bottom: 15px;
+    }
+
+    &__sub {
+        max-width: 483px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__location {
+        text-align: center;
+        max-width: 483px;
+        width: 100%;
+    }
+
+    &__location-item {
+        line-height: 27px;
+
+        span {
+            padding-top: 15px;
+            display: block;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+    &__sub-item {
+        text-align: center;
+        font-size: 13px;
+        line-height: 16px;
+
+        span {
+            display: block;
+        }
+    }
+
+    &__conection {
+        max-width: 350px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 70px;
+    }
+
+    &__menu-item {
+        margin-bottom: 18px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__menu-link {
+        color: $white;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__contacts-item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+
+    &__contacts-title {
+        font-size: 22px;
+        line-height: 27px;
+        margin-bottom: 15px;
+    }
+
+    &__contacts-link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 7px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__contacts-btn {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        opacity: 0.6;
+        padding-bottom: 18px;
+    }
+}
