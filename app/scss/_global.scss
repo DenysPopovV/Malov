@@ -45,3 +45,27 @@ html {
         z-index: 1;
     }
 }
+
+.button__arrow {
+    position: relative;
+    padding: 0 50px 5px 0;
+    overflow: hidden;
+    
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 160px;
+        height: 8px;
+        transform: translateX(-100px);    
+        left: 0;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-image: url('../images/icons/arrow-btn.svg');
+        transition: transform .5s linear;
+    }
+
+    &:hover::after {
+        transform: translateX(0);
+    }
+}
