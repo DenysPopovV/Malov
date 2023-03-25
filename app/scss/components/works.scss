@@ -1,0 +1,33 @@
+.works {
+    padding-bottom: 150px;
+
+    &__title {
+        margin-bottom: 90px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 30px;
+    }
+
+    &__list-item {
+        position: relative;
+    }
+
+    &__list-name {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: rotate(-90deg);
+    }
+
+    &__list-img {
+        width: 400px;
+        height: 566px;
+        padding-left: 30px;
+        background-color: aqua;
+    }
+
+    
+}

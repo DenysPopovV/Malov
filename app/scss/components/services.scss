@@ -1,0 +1,43 @@
+.services {
+    padding-bottom: 150px;
+
+    &__title {
+        margin-bottom: 100px;
+    }
+
+    &__table {
+        border-color: $border;
+        border-collapse: collapse;
+
+    }
+
+    &__table-item {
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        width: 480px;
+        height: 406px;
+
+        span {
+            display: block;
+        }
+
+    }
+
+    &__table-img {
+        width: 140px;
+        height: 140px;
+        position: relative;
+        margin-bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__table-text {
+        p {
+            font-weight: 700;
+            font-size: 29px;
+            line-height: 37px;
+        }
+    }
+}
