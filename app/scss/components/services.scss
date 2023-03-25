@@ -1,14 +1,21 @@
 .services {
     padding-bottom: 150px;
 
+    &::after {
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
     &__title {
         margin-bottom: 100px;
     }
 
     &__table {
+        position: relative;
         border-color: $border;
         border-collapse: collapse;
-
+        z-index: 3;
     }
 
     &__table-item {
@@ -35,8 +42,8 @@
 
     &__table-text {
         p {
-            font-weight: 700;
-            font-size: 29px;
+            font-weight: 600;
+            font-size: 28px;
             line-height: 37px;
         }
     }

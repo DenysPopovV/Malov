@@ -20,7 +20,11 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 65px;
-        box-shadow: -322px 210px 154px rgba(0, 0, 0, 0.01), -181px 118px 130px rgba(0, 0, 0, 0.05), -80px 53px 96px rgba(0, 0, 0, 0.09), -20px 13px 53px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: -322px 210px 154px rgba(0, 0, 0, 0.01),
+            -181px 118px 130px rgba(0, 0, 0, 0.05),
+            -80px 53px 96px rgba(0, 0, 0, 0.09),
+            -20px 13px 53px rgba(0, 0, 0, 0.1),
+            0px 0px 0px rgba(0, 0, 0, 0.1);
 
         &:last-child {
             margin-bottom: 0;
@@ -29,22 +33,30 @@
 
     &__btn {
         position: absolute;
-        top: 30px;
+        top: 50px;
         left: 55px;
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &::after,
         &::before {
             content: '';
             position: absolute;
-            background-color: $accent;
-            box-shadow: 0px 0px 4px 3px rgba(92, 177, 255, 1);
-            height: 24px;
-            width: 1px;
+            background-color: #1D9EFF;
+            box-shadow: 0px 0px 90.72px #1D9EFF,
+                0px 0px 51.84px #1D9EFF,
+                0px 0px 30.24px #1D9EFF,
+                0px 0px 15.12px #1D9EFF,
+                0px 0px 4.32px #1D9EFF,
+                0px 0px 2.16px #1D9EFF;
+            height: 4px;
+            width: 24px;
         }
 
-        &::after {
+        &::before {
             transform: rotate(90deg);
         }
     }
