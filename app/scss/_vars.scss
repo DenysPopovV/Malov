@@ -4,3 +4,11 @@ $title:#2E2E2E;
 $accent: #5CB1FF;
 $footer-bg: #272727;
 $border: #000000;
+
+%radio-hidden{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+}
