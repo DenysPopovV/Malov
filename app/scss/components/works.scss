@@ -7,27 +7,94 @@
 
     &__list {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 30px;
+        margin: 0 auto 100px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        max-width: 1229px;
+        grid-row-gap: 50px;
     }
 
     &__list-item {
         position: relative;
+        display: flex;
+        justify-content: center;
+        
+        filter: drop-shadow(-126px 226px 104px rgba(0, 0, 0, 0.01))      drop-shadow(-71px 127px 88px rgba(0, 0, 0, 0.05)) 
+        drop-shadow(-32px 57px 65px rgba(0, 0, 0, 0.09)) 
+        drop-shadow(-8px 14px 36px rgba(0, 0, 0, 0.1)) 
+        drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+
+        &:nth-child(2) {
+            transform: translateY(80px);
+        }
+
+        &:nth-child(3) {
+            transform: translateY(160px);
+        }
     }
 
     &__list-name {
         position: absolute;
-        left: 0;
+        left: 30px;
         top: 0;
-        transform: rotate(-90deg);
+        writing-mode: vertical-lr;
     }
 
     &__list-img {
-        width: 400px;
+        width: 290px;
         height: 566px;
-        padding-left: 30px;
-        background-color: aqua;
+        border-radius: 30px;
+        object-fit: cover;
+        cursor: pointer;        
+    }
+    &__list-number {
+        position: absolute;
+        right: 10px;
+        bottom: -30px;
+        font-size: 120px;
+        line-height: 86px;
+        font-weight: 900;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 3px $text;
     }
 
-    
+    &__btn {
+        display: inline-block;
+        transform: translateX(150px);
+        z-index: 1;
+        position: relative;
+        overflow: hidden;
+        padding: 15px 41px;
+        font-size: 16px;
+        color: $border;
+        background-color: transparent;
+        border: 1px solid $border;
+        transition: all 0.5s ease-in;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 55%;
+            transform: translateX(-50%) scaleY(1) scaleX(1.45);
+            top: 180%;
+            width: 160%;
+            height: 190%;
+            background-color: $border;
+            border-radius: 50%;
+            display: block;
+            transition: all 0.8s 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+            z-index: -1;
+        }
+
+        &:hover {
+            color: $white;
+            border: 1px solid $white;
+        }
+
+        &:hover::after {
+            top: -45%;
+            background-color: $border;
+        }
+    }
+
+
 }
