@@ -5,17 +5,16 @@
         margin-bottom: 73px;
     }
 
-    &__box {
+    &__tabs {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    &__item {
+    &__tabs-item {
         position: relative;
         max-width: 1237px;
         width: 100%;
-        min-height: 120px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -31,7 +30,18 @@
         }
     }
 
-    &__btn {
+    &__tabs-box {
+        padding: 25px 77px 25px 114px;
+    }
+
+    &__tabs-head {
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__tabs-btn {
         position: absolute;
         top: 50px;
         left: 55px;
@@ -58,6 +68,40 @@
 
         &::before {
             transform: rotate(90deg);
+            transition: opacity .5s linear, transform .5s linear;
+        }
+
+        &::after {
+            transition: opacity .5s linear, box-shadow .5s linear, background-color .2s linear;
+        }
+
+        &.active {
+
+            &::before {
+                transform: rotate(0);
+                opacity: 0;
+            }
+
+            &::after {
+                background-color: #D23605;
+                box-shadow: 0px 0px 90.72px #D23605,
+                    0px 0px 51.84px #D23605,
+                    0px 0px 30.24px #D23605,
+                    0px 0px 15.12px #D23605,
+                    0px 0px 4.32px #D23605,
+                    0px 0px 2.16px #D23605;
+            }
+        }
+    }
+
+    &__tabs-content {
+        max-width: 1008px;
+        p {
+            margin-bottom: 20px;
+            span {
+                display: block;
+                margin-bottom: 5px;
+            }
         }
     }
 }

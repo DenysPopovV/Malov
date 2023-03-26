@@ -96,9 +96,41 @@
                 </p>
             </div>
 
-            <button class="about__button button__arrow">
+            <button class="about__button button__arrow tab-btn" data-tab="#tab_5">
                 read more
             </button>
+
+            <div class="about__content tab-item" id="tab_5">
+                <div class="about__content-text">
+                    <p>
+                        Welcome to Malovv agency! We specialize in developing custom Shopify stores that help businesses
+                        of all sizes succeed in the e-commerce space.
+                    </p>
+                    <p>
+                        Our team is comprised of experienced designers, developers, and e-commerce experts who are
+                        dedicated to creating beautiful, high-performing Shopify stores that are tailored to each
+                        client's unique needs. We work closely with our clients to understand their business goals and
+                        develop custom solutions that align with their vision.
+                    </p>
+
+                    <p>
+                        At our agency, we believe in the power of Shopify to transform businesses and help them reach
+                        new heights. We have a deep understanding of the Shopify platform and all of its features, which
+                        allows us to create stores that are optimized for success. From design to development to ongoing
+                        maintenance, we are here to support our clients every step of the way.
+                    </p>
+                    <p>
+                        We take pride in delivering exceptional service and ensuring that our clients are happy with the
+                        results. Our goal is to help businesses achieve their e-commerce objectives and grow their
+                        online presence. We are passionate about what we do and are committed to helping our clients
+                        succeed in the ever-evolving world of e-commerce.
+                    </p>
+                    <p>
+                        Thank you for considering our Malovv for your e-commerce needs. We look forward to working with
+                        you and helping your business thrive.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -286,9 +318,9 @@
 
 
                     <span class="contacts__services">Services</span>
-                    <button class="contacts__services-btn" type="button"></button>
+                    <button class="contacts__services-btn tab-btn" type="button" data-tab="#tab_6"></button>
 
-                    <div class="contacts__filter">
+                    <div class="contacts__filter tab-item" id="tab_6">
                         <label class="contacts__item" for="troubleshooting">
                             <input class="contacts__variant" type="checkbox" id="troubleshooting"
                                 name="troubleshooting">
@@ -395,22 +427,151 @@
         <h3 class="faq__title title">
             FAQ
         </h3>
-        <ul class="faq__box">
-            <li class="faq__item">
-                <button class="faq__btn"></button>
-                <p class="faq__question">How do you estimate the price for your services?</p>
+        <ul class="faq__tabs">
+            <li class="faq__tabs-item">
+                <div class="faq__tabs-box">
+                    <div class="faq__tabs-head">
+                        <button class="faq__tabs-btn tab-btn" type="button" data-tab="#tab_1"></button>
+                        <p class="faq__tabs-question">
+                            How do you estimate the price for your services?
+                        </p>
+                    </div>
+                    <div class="faq__tabs-content tab-item" id="tab_1">
+                        <p>
+                            We typically estimate the price for our services based on a variety of factors, such as:
+                        </p>
+                        <p>
+                            Scope of work: The first thing that we consider when estimating the price for our services
+                            is the scope of work required. This includes the specific tasks or services that the client
+                            needs, such as designing a new theme, setting up a store, or optimizing an existing site.
+                        </p>
+                        <p>
+                            Level of customization: The more customized the work, the higher the price. We 
+                            may charge more for complex or highly customized work that requires a lot of development or
+                            coding.
+                        </p>
+                        <p>
+                            Timeframe: Experts may charge different rates depending on how quickly the client needs the
+                            work done. Rush projects often come at a higher price.
+                        </p>
+                        <p>
+                            Value-added services: We also offer additional services such as training, support, or
+                            ongoing maintenance. These services are often charged separately and can increase the
+                            overall cost of the project.x
+                        </p>
+                    </div>
+                </div>
             </li>
-            <li class="faq__item">
-                <button class="faq__btn"></button>
-                <p class="faq__question">Why do you only work with Shopify?</p>
+            <li class="faq__tabs-item">
+                <div class="faq__tabs-box">
+                    <div class="faq__tabs-head">
+                        <button class="faq__tabs-btn tab-btn" type="button" data-tab="#tab_2"></button>
+                        <p class="faq__tabs-question">
+                            Why do you only work with Shopify?
+                        </p>
+                    </div>
+                    <div class="faq__tabs-content tab-item" id="tab_2">
+                        <p>
+                            When it comes to e-commerce platforms, there are a number of options available on the
+                            market. However, one platform stands out above the rest - Shopify. These are the reason we
+                            chose to work with Shopify only:
+                        </p>
+                        <p>
+                            <span>
+                                1. Easy to use: Shopify has a user-friendly interface and provides easy-to-use tools
+                                to set
+                                up and manage an online store without requiring any coding skills.
+                            </span>
+                            <span>
+                                2. Flexibility: Shopify offers a wide range of templates, themes, and plugins to
+                                customize
+                                the look and functionality of your store to fit your business needs.
+                            </span>
+                            <span>
+                                3. Secure: Shopify is a fully hosted e-commerce platform that provides a secure and
+                                reliablehosting environment for your online store, protecting it from potential security threats.
+                            </span>
+                            <span>
+                                4. Scalability: Shopify can support businesses of any size, from small businesses to large
+                                enterprises, and provides flexible pricing plans to suit different needs.
+                            </span>
+                            <span>
+                                5. Integration: Shopify offers a vast array of integrations with third-party tools and
+                                services, allowing you to connect your store with different channels, including social media
+                                platforms and marketplaces.
+                            </span>
+                            <span>
+                                6. Support: Shopify provides 24/7 support via phone, email, and live chat, making it easy to
+                                get help whenever you need it.
+                            </span>
+                        </p>
+                        <p>
+                            If your store isn’t on Shopify yet, we can help you migrate! 
+                        </p>
+                    </div>
+                </div>
             </li>
-            <li class="faq__item">
-                <button class="faq__btn"></button>
-                <p class="faq__question">Can I run the store on Shopify by myself once development is complete?</p>
+            <li class="faq__tabs-item">
+                <div class="faq__tabs-box">
+                    <div class="faq__tabs-head">
+                        <button class="faq__tabs-btn tab-btn" type="button" data-tab="#tab_3"></button>
+                        <p class="faq__tabs-question">
+                            Can I run the store on Shopify by myself once development is complete?
+                        </p>
+                    </div>
+                    <div class="faq__tabs-content tab-item" id="tab_3">
+                        <p>
+                            Yes, Shopify is easy to use for beginners because it has a user-friendly interface and
+                            provides easy-to-use tools to set up and manage an online store without requiring any coding
+                            skills. In addition to that, Shopify has tons of resources you can use to maintain your
+                            store.
+                        </p>
+                    </div>
+                </div>
             </li>
-            <li class="faq__item">
-                <button class="faq__btn"></button>
-                <p class="faq__question">What services do you offer?</p>
+            <li class="faq__tabs-item">
+                <div class="faq__tabs-box">
+                    <div class="faq__tabs-head">
+                        <button class="faq__tabs-btn tab-btn" type="button" data-tab="#tab_4"></button>
+                        <p class="faq__tabs-question">
+                            What services do you offer?
+                        </p>
+                    </div>
+                    <div class="faq__tabs-content tab-item" id="tab_4">
+                        <p>
+                            Our expertise extends to most of the aspects of Shopify, including:
+                        </p>
+                        <p>
+                            <span>
+                                - Custom store development from scratch
+                            </span>
+                            <span>
+                                - Store migration to Shopify from any other platform
+                            </span>
+                            <span>
+                                - Shopify Plus exclusive features (Shopify Flow, Launchpad, Script Editor, etc)
+                            </span>
+                            <span>
+                                - Theme troubleshooting
+                            </span>
+                            <span>
+                                - Third-party app & sales channel integration
+                            </span>
+                            <span>
+                                - Shopify POS hardware setup (in-person or virtual)
+                            </span>
+                            <span>
+                                - Store optimization for increased speed and performance
+                            </span>
+                            <span>
+                                - Payment gateway integration
+                            </span>
+                            <span>
+                                - Responsive design for mobile devices
+                            <span>
+                        </p>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>

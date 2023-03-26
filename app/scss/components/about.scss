@@ -2,10 +2,28 @@
     padding-bottom: 150px;
 
     &__title {
-        margin-bottom: 30px;     
+        margin-bottom: 30px;
     }
 
     &__text {
         margin-bottom: 15px;
+    }
+
+    &__button {
+        margin-bottom: 20px;
+
+        &.active::after {
+            transform: translateX(0);
+        }
+    }
+
+    &__content {
+        max-width: 100%;
+    }
+
+    &__content-text {
+        p {
+            margin-bottom: 20px;
+        }
     }
 }
