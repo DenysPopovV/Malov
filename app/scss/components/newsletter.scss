@@ -58,6 +58,13 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
+        transition: color .3s linear, background-color .3s linear;
+
+
+        &:hover {
+            background-color: $accent;
+            color: $white;
+        }
     }
 
     &__media {
@@ -85,14 +92,18 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(238deg) brightness(105%) contrast(100%);
         }
 
         &--inst::after {
-            background-color: #fff;
+            background-image: url('../images/sprite.svg#inst-contact');
         }
 
         &--up::after {
-            background-color: #fff;
+            top: -3px;
+            width: 40px;
+            height: 40px;
+            background-image: url('../images/sprite.svg#contacts-up');
         }
     }
 
