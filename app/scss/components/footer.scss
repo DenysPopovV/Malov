@@ -61,8 +61,11 @@
             background-position: center;
         }
 
-        &--inst::after {
-            background-image: url('../images/sprite.svg#inst');
+        &--inst {
+
+            &::after {
+                background-image: url('../images/sprite.svg#inst');
+            }
         }
 
         &--up::after {

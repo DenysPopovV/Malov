@@ -47,12 +47,6 @@ function onTabClick(item) {
             currentBtn.classList.toggle('active');
             currentTab.classList.toggle('active');
         });
-
-
     });
-
-
-
-
 }
 
