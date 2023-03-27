@@ -19,11 +19,19 @@
 
     &__content {
         max-width: 100%;
+        transform: translateX(-200%);
+
+        &.active {
+            transform: translateX(0);
+        }
     }
 
     &__content-text {
+        
         p {
             margin-bottom: 20px;
         }
+
+        
     }
 }

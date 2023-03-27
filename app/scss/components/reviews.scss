@@ -2,23 +2,86 @@
     padding-bottom: 150px;
 
     &__title {
-        margin-bottom: 90px;
+        margin-bottom: 195px;
     }
 
-    &__swiper {
-        max-width: 1148px;
-        border-radius: 30px;
-        padding: 100px 30px 0 30px;
-        position: relative;
+    &__center {
+        display: flex;
+        justify-content: center;
     }
 
-    &__swiper-item {
+    .swiper-container {
         position: relative;
-        max-width: 918px;
-        min-height: 400px;
+        width: 1095px;
+        height: 486px;
+        padding: 30px 86px;
         background-color: #222;
         border-radius: 20px;
-        padding: 30px 86px;
+    }
+
+    .swiper-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+    }
+
+    .swiper-slide-active {
+        opacity: 1;
+    }
+
+    &__arrows {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 60px;
+        background-color: $accent;
+        z-index: 10;
+        cursor: pointer;
+        border-radius: 50%;
+        box-shadow: 0px 0px 287.28px #5CB1FF,
+            0px 0px 164.16px #5CB1FF,
+            0px 0px 95.76px #5CB1FF,
+            0px 0px 47.88px #5CB1FF,
+            0px 0px 13.68px #5CB1FF,
+            0px 0px 6.84px #5CB1FF;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 40px;
+                height: 10px;
+                background-image: url('../images/sprite.svg#arrow');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+    }
+
+    .swiper-button-prev {
+        left: -116px;
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(180deg);
+        }
+    }
+
+    .swiper-button-next {
+        right: -116px;
     }
 
     &__swiper-box {
@@ -26,14 +89,10 @@
     }
 
     &__swiper-name {
-        color: $white;
+        color: #fff;
         font-weight: 400;
-        text-shadow: 0px 0px 260.82px $white,
-            0px 0px 149.04px $white,
-            0px 0px 86.94px $white,
-            0px 0px 43.47px $white,
-            0px 0px 12.42px $white,
-            0px 0px 6.21px $white;
+        text-shadow: 0px 0px 260.82px #fff,
+            0px 0px 149.04px #fff;
 
         span {
             display: block;
@@ -45,7 +104,7 @@
 
     &__swiper-img {
         position: absolute;
-        top: -100px;
+        top: -132px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -53,65 +112,8 @@
     &__swiper-text {
         p {
             padding-left: 25px;
-            color: $white;
+            color: #fff;
             margin-bottom: 20px;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
         }
     }
-
-    &__swiper-arrows {
-        position: absolute;
-        width: 100%;
-        top: 53%;
-        z-index: 10;
-    }
-
-    &__swiper-arrow {
-        position: absolute;
-        background-color: $white;
-        border: 3px solid $accent;
-        width: 57px;
-        height: 57px;
-        border-radius: 50%;
-        transition: background-color .4s linear;
-
-        &::after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 8px;
-            top: 23px;
-            left: -3px;
-            background-color: $accent;
-            mask-image: url('../images/sprite.svg#arrow');
-            mask-size: 40px 40px;
-            mask-position: center;
-            mask-repeat: no-repeat;
-            transition: background-color .4s linear;
-        }
-
-        &:hover {
-            background-color: $accent;
-            &::after {
-                background-color: $white;
-            }
-        }
-    }
-
-    .swiper-button-next {
-        left: -28px;
-
-        &::after {
-            transform: rotate(180deg);
-        }
-    }
-
-    .swiper-button-prev {
-        right: 30px;
-    }
-
-
 }
