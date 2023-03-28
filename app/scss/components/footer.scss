@@ -1,32 +1,64 @@
 .footer {
-    padding: 30px 15px 15px 15px;
+    padding: 30px 0 15px;
     background-color: $footer-bg;
     color: $white;
-    min-height: 409px;
 }
 
 .footer-top {
     position: relative;
 
+    @include mxw($xs) {
+        padding-bottom: 20px;
+    }
+
     &__wrapper {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        transform: translate(-10px, -50px);
+        transform: translateY(-50px);
+
+        @include mxw($xs) {
+            transform: translateY(0);
+        }
     }
 
     &__box {
+        margin-right: 20px;
         max-width: 850px;
         width: 100%;
         display: flex;
         justify-content: space-between;
+
+        @include mxw($md) {
+            flex-direction: column;
+            max-width: 550px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 305px;
+        width: 100%;
     }
 
     &__logo {
+
+        @include mxw($xs) {
+            margin-bottom: 10px;
+            display: block;
+        }
+
         img {
             width: 277px;
             height: 85px;
             object-fit: cover;
+
+            @include mxw($md) {
+                width: 131px;
+                height: 45px;
+            }
         }
     }
 
@@ -37,6 +69,20 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        order: 1;
+
+        @include mxw($md) {
+            order: 2;
+        }
+    }
+
+    &__location {
+        order: 2;
+
+        @include mxw($md) {
+            order: 1;
+            margin-bottom: 30px;
+        }
     }
 
     &__location-link {
@@ -52,11 +98,24 @@
             font-weight: 400;
             font-size: 20px;
             line-height: 24px;
+
+        }
+
+        @include mxw($md) {
+            text-align: left;
+
+            span {
+                font-size: 14px;
+            }
         }
     }
 
     .navigation {
-        margin-right: 10px;
+        margin-right: 20px;
+
+        @include mxw($xs) {
+            display: none;
+        }
 
         &__item {
             margin-bottom: 24px;
@@ -75,9 +134,14 @@
 
     &__contact {
         transform: translateY(-50px);
+
+        @include mxw($xs) {
+            transform: translateY(0);
+        }
     }
 
     &__contact-title {
+        width: 170px;
         font-weight: 500;
         font-size: 22px;
         line-height: 27px;
@@ -112,25 +176,49 @@
     }
 
     &__developer {
+        margin-right: 10px;
         transform: translateX(10px);
+
+        @include mxw($md) {
+            transform: translateY(0);
+        }
+
+        @include mxw($xs) {
+            font-size: 6px;
+        }
     }
 
     &__copyright {
+        margin-right: 10px;
         text-align: center;
         transform: translateX(-110px);
+
         span {
             display: block;
         }
 
-        @include mxw($lg) {
-            // transform: translateX(-156px);
+        @include mxw($md) {
+            transform: translateY(0);
+        }
+
+        @include mxw($xs) {
+            font-size: 6px;
         }
     }
 
     &__policy {
+        margin-right: 10px;
         transform: translateX(-120px);
         font-weight: 300;
         font-size: 16px;
         line-height: 20px;
+
+        @include mxw($md) {
+            transform: translateY(0);
+        }
+
+        @include mxw($sm) {
+            font-size: 10px;
+        }
     }
 }

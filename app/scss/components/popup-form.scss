@@ -70,7 +70,7 @@
         background: rgba(58, 58, 58, 0.7);
         transition: opacity 350ms;
         opacity: 1;
-        z-index: 10000;
+        z-index: -10000;
         display: block;
     }
 
