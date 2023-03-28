@@ -31,7 +31,7 @@
                         </a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="#">
+                        <a class="header__menu-link" href="services.html">
                             Services
                         </a>
                     </li>
@@ -48,7 +48,7 @@
                 </ul>
             </nav>
 
-            <button class="header__button" type="button">
+            <button class="header__button hover__btn" type="button">
                 Request a call
             </button>
 
@@ -299,22 +299,22 @@
                         </p>
                     </div>
                 </div>
-                <form class="contacts__form">
+                <form class="contacts__form" id="form">
                     <div class="contacts__form-box">
-                        <label class="contacts__form-name" for="">
-                            <input class="contacts__form-side" type="" name="" id="" placeholder="First name, Last name"
-                                required>
+                        <label class="contacts__form-name" for="client">
+                            <input class="contacts__form-side" type="text" name="client" id="client"
+                                placeholder="First name, Last name">
                         </label>
-                        <label class="contacts__form-name" for="">
-                            <input class="contacts__form-side" type="" name="" id="" placeholder="E-mail" required>
+                        <label class="contacts__form-name" for="mail">
+                            <input class="contacts__form-side" type="e-mail" name="mail" id="mail" placeholder="E-mail">
                         </label>
-                        <label class="contacts__form-name" for="">
-                            <input class="contacts__form-side" type="" name="" id="" placeholder="Website (optional)"
-                                required>
+                        <label class="contacts__form-name" for="link">
+                            <input class="contacts__form-side" type="text" name="link" id="link"
+                                placeholder="Website (optional)">
                         </label>
-                        <label class="contacts__form-name" for="">
-                            <input class="contacts__form-side" type="" name="" id="" placeholder="Tell us more"
-                                required>
+                        <label class="contacts__form-name" for="question">
+                            <input class="contacts__form-side" type="text" name="question" id="question"
+                                placeholder="Tell us more">
                         </label>
                     </div>
 
@@ -330,8 +330,7 @@
                             Theme troubleshooting
                         </label>
                         <label class="contacts__item" for="development">
-                            <input class="contacts__variant" type="checkbox" id="development" name="development"
-                                checked>
+                            <input class="contacts__variant" type="checkbox" id="development" name="development">
                             <span class="contacts__checkbox"></span>
                             Custom store development
                         </label>
@@ -357,13 +356,13 @@
                         </label>
                     </div>
                     <div class="contacts__btn">
-                        <button class="contacts__submit button__arrow" type="submit" name="" id=""
-                            value="Send">Send</button>
+                        <button class="contacts__submit button__arrow" type="submit" >Send</button>
                         <label class="contacts__privacy" for="privacy">
                             <input class="contacts__variant" type="checkbox" id="privacy" name="privacy" required>
                             <span class="contacts__checkbox"></span>
                             privacy policy
                         </label>
+                        <p class="contacts__danger" id="danger">Incorrect field value! Try again!</p>
                     </div>
 
                 </form>
@@ -579,10 +578,10 @@
     </div>
 </section>
 
-            <div class="popup-form__fixed">
+            <div class="popup-form__fixed" id="success">
 
     <div class="popup-form">
-        <button class="popup-form__close-btn"></button>
+        <button class="popup-form__close-btn" id="close"></button>
         <img class="popup-form__logo" src="images/logo.svg" alt="Logo of company">
         <div class="popup-form__text">
             <p>
@@ -609,6 +608,9 @@
     </div>
 
 </div>
+
+
+
             
         </main>
 
