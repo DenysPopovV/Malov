@@ -46,33 +46,6 @@
         padding-top: 20px;
     }
 
-    &__icons-item {
-        position: relative;
-        width: 43px;
-        height: 43px;
-
-        &::after {
-            content: '';
-            position: absolute;
-            width: 41px;
-            height: 41px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
-
-        &--inst {
-            
-            &::after {
-                background-image: url('../images/sprite.svg#inst');
-            }
-        }
-
-        &--up::after {
-            background-image: url('../images/sprite.svg#tabler_brand-upwork');
-        }
-    }
-
     &__author {
         text-align: center;
         font-size: 13px;
