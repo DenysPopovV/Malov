@@ -1,73 +1,95 @@
 .footer {
-    width: 100%;
-    height: 420px;
+    padding: 30px 0 15px;
     background-color: $footer-bg;
     color: $white;
+}
+
+.footer-top {
+    position: relative;
+
+    @include mxw($xs) {
+        padding-bottom: 20px;
+    }
 
     &__wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items: center;
+        transform: translateY(-50px);
+
+        @include mxw($xs) {
+            transform: translateY(0);
+        }
     }
 
-    &__content {
+    &__box {
+        margin-right: 20px;
         max-width: 850px;
         width: 100%;
-        padding-top: 27px;
+        display: flex;
+        justify-content: space-between;
+
+        @include mxw($md) {
+            flex-direction: column;
+            max-width: 550px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 305px;
+        width: 100%;
     }
 
     &__logo {
-        display: block;
-        margin-bottom: 32px;
+
+        @include mxw($xs) {
+            margin-bottom: 10px;
+            display: block;
+        }
 
         img {
             width: 277px;
             height: 85px;
             object-fit: cover;
+
+            @include mxw($md) {
+                width: 131px;
+                height: 45px;
+            }
         }
     }
 
-    &__box {
-        display: flex;
-        justify-content: space-between;
-        margin-left: 30px;
-        height: 260px;
-    }
 
-    &__info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
 
-    &__icons {
-        width: 100px;
-        display: flex;
-        justify-content: space-between;
-        padding-top: 20px;
-    }
-
-    &__author {
-        text-align: center;
-        font-size: 13px;
-        line-height: 16px;
-        padding-bottom: 15px;
-    }
-
-    &__sub {
-        max-width: 483px;
+    &__social {
+        max-width: 120px;
         width: 100%;
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
+        order: 1;
+
+        @include mxw($md) {
+            order: 2;
+        }
     }
 
     &__location {
-        text-align: center;
-        max-width: 483px;
-        width: 100%;
+        order: 2;
+
+        @include mxw($md) {
+            order: 1;
+            margin-bottom: 30px;
+        }
     }
 
-    &__location-item {
+    &__location-link {
+        display: block;
+        text-align: center;
+        font-weight: 500;
+        font-size: 22px;
         line-height: 27px;
 
         span {
@@ -76,76 +98,127 @@
             font-weight: 400;
             font-size: 20px;
             line-height: 24px;
+
+        }
+
+        @include mxw($md) {
+            text-align: left;
+
+            span {
+                font-size: 14px;
+            }
         }
     }
 
-    &__sub-item {
+    .navigation {
+        margin-right: 20px;
+
+        @include mxw($xs) {
+            display: none;
+        }
+
+        &__item {
+            margin-bottom: 24px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__link {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    &__contact {
+        transform: translateY(-50px);
+
+        @include mxw($xs) {
+            transform: translateY(0);
+        }
+    }
+
+    &__contact-title {
+        width: 170px;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 27px;
+        margin-bottom: 16px;
+    }
+
+    &__contact-link {
+        margin-bottom: 7px;
+        display: block;
+
+        &:nth-child(3) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__contact-link,
+    &__contact-time {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+.footer-bottom {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__developer {
+        margin-right: 10px;
+        transform: translateX(10px);
+
+        @include mxw($md) {
+            transform: translateY(0);
+        }
+
+        @include mxw($xs) {
+            font-size: 6px;
+        }
+    }
+
+    &__copyright {
+        margin-right: 10px;
         text-align: center;
-        font-size: 13px;
-        line-height: 16px;
+        transform: translateX(-110px);
 
         span {
             display: block;
         }
-    }
 
-    &__conection {
-        max-width: 350px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding-top: 70px;
-    }
+        @include mxw($md) {
+            transform: translateY(0);
+        }
 
-    &__menu-item {
-        margin-bottom: 18px;
-
-        &:last-child {
-            margin-bottom: 0;
+        @include mxw($xs) {
+            font-size: 6px;
         }
     }
 
-    &__menu-link {
-        color: $white;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    &__contacts {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    &__contacts-item {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 25px;
-    }
-
-    &__contacts-title {
-        font-size: 22px;
-        line-height: 27px;
-        margin-bottom: 15px;
-    }
-
-    &__contacts-link {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        margin-bottom: 7px;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    &__contacts-btn {
+    &__policy {
+        margin-right: 10px;
+        transform: translateX(-120px);
         font-weight: 300;
         font-size: 16px;
         line-height: 20px;
-        opacity: 0.6;
-        padding-bottom: 18px;
+
+        @include mxw($md) {
+            transform: translateY(0);
+        }
+
+        @include mxw($sm) {
+            font-size: 10px;
+        }
     }
 }

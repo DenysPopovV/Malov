@@ -9,8 +9,7 @@
         display: grid;
         margin: 0 auto 100px;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        max-width: 1229px;
-        grid-row-gap: 50px;
+        max-width: 1170px;
     }
 
     &__list-item {
@@ -34,7 +33,7 @@
 
     &__list-name {
         position: absolute;
-        left: 30px;
+        left: 0;
         top: 0;
         writing-mode: vertical-lr;
     }

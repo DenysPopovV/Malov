@@ -12,21 +12,42 @@
     }
 
     &__table {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border: 1px solid $border;
         position: relative;
-        border-color: $border;
-        border-collapse: collapse;
         z-index: 3;
+
+        @include mxw($sm) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
+
 
     &__table-item {
         padding: 10px;
         text-align: center;
         position: relative;
-        width: 480px;
-        height: 406px;
+        max-width: 480px;
+        min-height: 406px;
+        border: 1px solid $border;
 
         span {
             display: block;
+
+            @include mxw($xs) {
+                display: contents;
+            }
+        }
+
+        @include mxw($lg) {
+            min-height: 335px;
+        }
+        @include mxw($md) {
+            min-height: 250px;
+        }
+        @include mxw($xs) {
+            min-height: 200px;
         }
     }
 
@@ -35,15 +56,43 @@
         height: 240px;
         object-fit: cover;
         margin: 0 auto 50px;
+        @include mxw($lg) {
+            width: 250px;
+            height: 175px;
+        }
+        @include mxw($md) {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 30px;
+        }
+        @include mxw($xs) {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+        }
+        
     }
 
     &__table-text {
-        height: 75px;
-
+    
         p {
             font-weight: 600;
             font-size: 28px;
             line-height: 37px;
+
+            @include mxw($lg) {
+                font-size: 20px;
+            }
+
+            @include mxw($md) {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            @include mxw($xs) {
+                font-size: 12px;
+                line-height: 15px;
+            }
         }
     }
 }

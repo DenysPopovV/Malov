@@ -18,6 +18,9 @@
     &__menu-list {
         display: flex;
         align-items: center;
+        @include mxw($sm) {
+            display: none;
+        }
     }
 
     &__menu-item {
@@ -25,6 +28,10 @@
 
         &:last-child {
             margin-right: 0;
+        }
+
+        @include mxw($md) {
+            margin-right: 20px;
         }
     }
 

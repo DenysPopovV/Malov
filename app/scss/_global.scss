@@ -74,6 +74,18 @@ input {
 
     &:hover::after {
         transform: translateX(0);
+        @include mxw($sm) {
+            transform: translate(-60px);
+        }
+    }
+
+    @include mxw($sm) {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    @include mxw($xs) {
+        font-size: 12px;
+        line-height: 15px;
     }
 }
 

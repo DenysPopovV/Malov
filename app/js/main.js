@@ -30,7 +30,6 @@ swiperNextButton.addEventListener('click', () => {
 
 
 
-
 const tabBtn = document.querySelectorAll('.tab-btn');
 const tabsItems = document.querySelectorAll('.tab-item');
 
@@ -91,7 +90,6 @@ form.addEventListener('submit', (e) => {
       danger.style.display = 'none';
       success.classList.add('popup-form__fixed--active');
     }
-
     if (success.classList.contains('popup-form__fixed--active')) {
       close.addEventListener("click", function () {
         success.classList.remove('popup-form__fixed--active')
