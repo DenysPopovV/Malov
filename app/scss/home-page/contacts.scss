@@ -68,6 +68,7 @@
         display: block;
         margin-bottom: 45px;
 
+
         &:last-of-type {
             margin-bottom: 35px;
 
@@ -192,8 +193,10 @@
     }
 
     &__btn {
+        position: relative;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
 
         &:last-child {
             margin-bottom: 0;
@@ -219,6 +222,18 @@
         line-height: 24px;
         cursor: pointer;
         margin-bottom: 5px;
+    }
+
+    &__danger{
+        position: absolute;
+        display: none;
+
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: red;
+        top: 90px;
+        right: 5px;
     }
 
     &__location {

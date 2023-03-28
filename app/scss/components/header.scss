@@ -41,43 +41,4 @@
         line-height: 20px;
 
     }
-
-    &__button {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        padding: 17px 28px;
-        position: relative;
-
-        &::after,
-        &::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: -3px;
-            background-image: url('../images/sprite.svg#ellipse-btn');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 160px 154px;
-            transition: transform .3s linear;
-        }
-
-        &::after {
-            transform: rotate(1deg);
-        }
-
-        &::before {
-            transform: rotate(-7deg);
-        }
-
-        &:hover {
-            &::after,
-            &::before {
-                transform: rotate(-2deg);
-            }
-        }
-
-    }
 }

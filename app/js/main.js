@@ -6,10 +6,8 @@ const swiperPrevButton = swiperContainer.querySelector('.swiper-button-prev');
 const swiperNextButton = swiperContainer.querySelector('.swiper-button-next');
 let currentSlide = 0;
 
-// встановлюємо активним перший слайд
 swiperSlides[currentSlide].classList.add('swiper-slide-active');
 
-// обробник кнопки "назад"
 swiperPrevButton.addEventListener('click', () => {
   swiperSlides[currentSlide].classList.remove('swiper-slide-active');
   currentSlide--;
@@ -19,7 +17,6 @@ swiperPrevButton.addEventListener('click', () => {
   swiperSlides[currentSlide].classList.add('swiper-slide-active');
 });
 
-// обробник кнопки "вперед"
 swiperNextButton.addEventListener('click', () => {
   swiperSlides[currentSlide].classList.remove('swiper-slide-active');
   currentSlide++;
@@ -28,16 +25,6 @@ swiperNextButton.addEventListener('click', () => {
   }
   swiperSlides[currentSlide].classList.add('swiper-slide-active');
 });
-
-// автоматична зміна слайдів
-// setInterval(() => {
-//   swiperSlides[currentSlide].classList.remove('swiper-slide-active');
-//   currentSlide++;
-//   if (currentSlide >= swiperSlides.length) {
-//     currentSlide = 0;
-//   }
-//   swiperSlides[currentSlide].classList.add('swiper-slide-active');
-// }, 5000);
 
 
 
@@ -73,6 +60,42 @@ function onTabClick(item) {
 }
 
 
+let form = document.getElementById('form');
+let client = document.getElementById('client');
+let mail = document.getElementById('mail');
+let link = document.getElementById('link');
+let question = document.getElementById('question');
+let success = document.getElementById('success');
+let danger = document.getElementById('danger');
+let close = document.getElementById('close');
 
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
 
+  function checkInputs() {
+    let mailValue = mail.value.trim();
+    let clientValue = client.value.trim();
+    let linkValue = link.value.trim();
+    let questionValue = question.value.trim();
 
+    if (mailValue === '' || clientValue === '' || linkValue === '' || questionValue === '') {
+      danger.style.display = 'block';
+    } else {
+      setTimeout(() => {
+        mailValue = '';
+        clientValue = '';
+        linkValue = '';
+        questionValue = '';
+      }, 2000);
+      danger.style.display = 'none';
+      success.classList.add('popup-form__fixed--active');
+    }
+    if (success.classList.contains('popup-form__fixed--active')) {
+      close.addEventListener("click", function () {
+        success.classList.remove('popup-form__fixed--active')
+      });
+    }
+
+  }
+  checkInputs();
+});

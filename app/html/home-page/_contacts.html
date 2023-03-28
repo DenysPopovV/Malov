@@ -19,22 +19,22 @@
                         </p>
                     </div>
                 </div>
-                <form class="contacts__form">
+                <form class="contacts__form" id="form">
                     <div class="contacts__form-box">
-                        <label class="contacts__form-name" for="">
-                            <input class="contacts__form-side" type="" name="" id="" placeholder="First name, Last name"
-                                required>
+                        <label class="contacts__form-name" for="client">
+                            <input class="contacts__form-side" type="text" name="client" id="client"
+                                placeholder="First name, Last name">
                         </label>
-                        <label class="contacts__form-name" for="">
-                            <input class="contacts__form-side" type="" name="" id="" placeholder="E-mail" required>
+                        <label class="contacts__form-name" for="mail">
+                            <input class="contacts__form-side" type="e-mail" name="mail" id="mail" placeholder="E-mail">
                         </label>
-                        <label class="contacts__form-name" for="">
-                            <input class="contacts__form-side" type="" name="" id="" placeholder="Website (optional)"
-                                required>
+                        <label class="contacts__form-name" for="link">
+                            <input class="contacts__form-side" type="text" name="link" id="link"
+                                placeholder="Website (optional)">
                         </label>
-                        <label class="contacts__form-name" for="">
-                            <input class="contacts__form-side" type="" name="" id="" placeholder="Tell us more"
-                                required>
+                        <label class="contacts__form-name" for="question">
+                            <input class="contacts__form-side" type="text" name="question" id="question"
+                                placeholder="Tell us more">
                         </label>
                     </div>
 
@@ -50,8 +50,7 @@
                             Theme troubleshooting
                         </label>
                         <label class="contacts__item" for="development">
-                            <input class="contacts__variant" type="checkbox" id="development" name="development"
-                                checked>
+                            <input class="contacts__variant" type="checkbox" id="development" name="development">
                             <span class="contacts__checkbox"></span>
                             Custom store development
                         </label>
@@ -77,13 +76,13 @@
                         </label>
                     </div>
                     <div class="contacts__btn">
-                        <button class="contacts__submit button__arrow" type="submit" name="" id=""
-                            value="Send">Send</button>
+                        <button class="contacts__submit button__arrow" type="submit" >Send</button>
                         <label class="contacts__privacy" for="privacy">
-                            <input class="contacts__variant" type="checkbox" id="privacy" name="privacy" required>
+                            <input class="contacts__variant" type="checkbox" id="privacy" name="privacy">
                             <span class="contacts__checkbox"></span>
                             privacy policy
                         </label>
+                        <p class="contacts__danger" id="danger">Incorrect field value! Try again!</p>
                     </div>
 
                 </form>

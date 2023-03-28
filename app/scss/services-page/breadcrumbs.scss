@@ -1,0 +1,46 @@
+.breadcrumbs {
+    
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(60vh - 114px);
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 500px 200px;
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(90px);
+
+    }
+
+    &__item{
+        padding-right: 40px;
+        position: relative;
+        &:first-child{
+            &::after{
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 8px;
+                // background-color: #000;
+                right: 10px;
+                top: 12px;
+                background-image: url('../images/sprite.svg#breadcrumbs-btn');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        }
+
+        &:last-child{
+            padding-right: 0;
+        }
+
+    }
+}
