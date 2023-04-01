@@ -1,10 +1,10 @@
 .services {
+    position: relative;
 
     &__text {
         display: flex;
         justify-content: flex-end;
         transform: translate(-80px, 55px);
-        // margin-bottom: 80px;
 
         p {
             max-width: 995px;
@@ -226,6 +226,17 @@
         }
     }
 
+    &__danger {
+        position: absolute;
+        display: none;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: red;
+        top: 90px;
+        right: 5px;
+    }
+
     &__submit {
         font-weight: 400;
         font-size: 16px;
@@ -237,9 +248,28 @@
         }
     }
 
+    &__fixed {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        background: rgba(58, 58, 58, 0.7);
+        z-index: 10000;
+
+        &.active{
+            display: block;
+            max-height: 100%;
+        }
+    }
+
     &__card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-right: -50%;
         color: #E3E3E3;
-        position: relative;
         width: 100%;
         background-color: $footer-bg;
 
@@ -253,7 +283,7 @@
         }
     }
 
-    &__card-close{
+    &__card-close {
         position: absolute;
         width: 20px;
         height: 20px;
@@ -262,9 +292,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
         &::after,
-        &::before{
+        &::before {
             content: '';
             position: absolute;
             width: 24px;
@@ -273,7 +303,7 @@
             transform: rotate(45deg);
         }
 
-        &::before{
+        &::before {
             transform: rotate(-45deg);
         }
 
@@ -317,12 +347,10 @@
         width: 160px;
         display: flex;
         justify-content: space-between;
-        padding-top: 20px;
-        margin-bottom: 127px;
     }
 
     &__card-scope {
-        padding: 36px 0 0 13px;
+        padding: 36px 0 50px 13px;
     }
 
     &__card-title {
@@ -361,5 +389,30 @@
             filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(212deg) brightness(111%) contrast(101%);
         }
 
+    }
+}
+
+.remove-button{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 18px;
+    top: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 1px;
+        background-color: $white;
+        transform: rotate(45deg);
+    }
+
+    &::before {
+        transform: rotate(-45deg);
     }
 }
