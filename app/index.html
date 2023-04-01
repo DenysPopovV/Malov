@@ -41,7 +41,7 @@
                         </a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="#">
+                        <a class="header__menu-link" href="#faq">
                             FAQ
                         </a>
                     </li>
@@ -149,7 +149,7 @@
     </div>
 </section>
 
-    <section class="services bg-effect">
+    <section class="services ">
     <div class="container">
         <h3 class="services__title title">
             Our services
@@ -223,8 +223,9 @@
                 <span class="works__list-number">03</span>
             </li>
         </ul>
-
-        <a class="works__btn" href="#">See more</a>
+        <div class="works__button-box">
+            <a class="works__btn" href="#">See more</a>
+        </div>
     </div>
 </section>
 
@@ -239,7 +240,9 @@
                             <span class="reviews__swiper-name">Anna
                                 <span class="reviews__swiper-profession">Custom store development</span>
                             </span>
-                            <img class="reviews__swiper-img" src="images/avatar.png" alt="">
+                            <div class="reviews__swiper-img">
+                                <img src="images/avatar.png" alt="">
+                            </div>
                         </div>
 
                         <div class="reviews__swiper-text">
@@ -268,7 +271,9 @@
                             <span class="reviews__swiper-name">Anna
                                 <span class="reviews__swiper-profession">Custom store development</span>
                             </span>
-                            <img class="reviews__swiper-img" src="images/avatar.png" alt="">
+                            <div class="reviews__swiper-img">
+                                <img src="images/avatar.png" alt="">
+                            </div>
                         </div>
 
                         <div class="reviews__swiper-text">
@@ -290,7 +295,7 @@
         </div>
 </section>
 
-    <section class="contacts">
+     <section class="contacts">
     <div class="container">
         <h3 class="contacts__title title">Contacts</h3>
         <div class="contacts__wrapper">
@@ -368,7 +373,7 @@
                         </label>
                     </div>
                     <div class="contacts__btn">
-                        <button class="contacts__submit button__arrow" type="submit" onclick="success()">Send</button>
+                        <button class="contacts__submit button__arrow" type="submit">Send</button>
                         <label class="contacts__privacy" for="privacy">
                             <input class="contacts__variant" type="checkbox" id="privacy" name="privacy" required>
                             <span class="contacts__checkbox"></span>
@@ -389,16 +394,16 @@
                 </ul>
             </div>
             <ul class="contacts__us">
-                <li class="contacts__conect">
+                <li class="contacts__connect">
                     <span class="contacts__text-title">Contacts</span>
                     <a class="contacts__link" href="mailto:hello@malovv.com">hello@malovv.com</a>
                     <a class="contacts__link" href="tel:18886668888">1-888-666-8888</a>
                 </li>
-                <li class="contacts__conect">
+                <li class="contacts__connect">
                     <span class="contacts__text-title">Working hours</span>
                     <span class="contacts__time"><span>9:00</span> - <span>21:00</span></span>
                 </li>
-                <li class="contacts__conect">
+                <li class="contacts__connect">
                     <span class="contacts__text-title">We on</span>
                     <a class="contacts__social" href="#"></a>
                 </li>
@@ -439,7 +444,7 @@
         <h3 class="faq__title title">
             FAQ
         </h3>
-        <ul class="faq__tabs">
+        <ul class="faq__tabs" id="faq">
             <li class="faq__tabs-item">
                 <div class="faq__tabs-box">
                     <div class="faq__tabs-head">
@@ -501,19 +506,23 @@
                             </span>
                             <span>
                                 3. Secure: Shopify is a fully hosted e-commerce platform that provides a secure and
-                                reliablehosting environment for your online store, protecting it from potential security threats.
+                                reliablehosting environment for your online store, protecting it from potential security
+                                threats.
                             </span>
                             <span>
-                                4. Scalability: Shopify can support businesses of any size, from small businesses to large
+                                4. Scalability: Shopify can support businesses of any size, from small businesses to
+                                large
                                 enterprises, and provides flexible pricing plans to suit different needs.
                             </span>
                             <span>
                                 5. Integration: Shopify offers a vast array of integrations with third-party tools and
-                                services, allowing you to connect your store with different channels, including social media
+                                services, allowing you to connect your store with different channels, including social
+                                media
                                 platforms and marketplaces.
                             </span>
                             <span>
-                                6. Support: Shopify provides 24/7 support via phone, email, and live chat, making it easy to
+                                6. Support: Shopify provides 24/7 support via phone, email, and live chat, making it
+                                easy to
                                 get help whenever you need it.
                             </span>
                         </p>
@@ -528,7 +537,7 @@
                     <div class="faq__tabs-head">
                         <button class="faq__tabs-btn tab-btn" type="button" data-tab="#tab_3"></button>
                         <p class="faq__tabs-question">
-                            Can I run the store on Shopify by myself once development is complete?
+                            Can I run the store on Shopify by <span>myself once development is complete?</span>
                         </p>
                     </div>
                     <div class="faq__tabs-content tab-item" id="tab_3">
@@ -580,7 +589,7 @@
                             </span>
                             <span>
                                 - Responsive design for mobile devices
-                            <span>
+                                <span>
                         </p>
                     </div>
                 </div>
@@ -621,7 +630,7 @@
 </div>
 
 
-
+ 
 
 </main>
 

@@ -1,8 +1,24 @@
 .faq {
-    margin-bottom: 150px;
+    padding-bottom: 150px;
+
+    @include mxw($sm) {
+        padding-bottom: 100px;
+    }
+
+    @include mxw($xs) {
+        padding-bottom: 50px;
+    }
 
     &__title {
         margin-bottom: 73px;
+
+        @include mxw($sm) {
+            margin-bottom: 50px;
+        }
+
+        @include mxw($xs) {
+            margin-bottom: 30px;
+        }
     }
 
     &__tabs {
@@ -28,10 +44,23 @@
         &:last-child {
             margin-bottom: 0;
         }
+
+        @include mxw($xs) {
+            margin-bottom: 16px;
+        }
     }
 
     &__tabs-box {
         padding: 25px 77px 25px 114px;
+
+        @include mxw($md) {
+            padding-right: 10px;
+        }
+
+        @include mxw($xs) {
+            padding-right: 10px;
+            padding: 10px 10px 10px 77px; 
+        }
     }
 
     &__tabs-head {
@@ -39,6 +68,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include mxw($md) {
+            justify-content: flex-end;
+        }
+
+        @include mxw($md) {
+            height: 57px;
+        }
     }
 
     &__tabs-btn {
@@ -50,6 +87,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include mxw($xs) {
+            left: 40px;
+            top: 28px;
+        }
 
         &::after,
         &::before {
@@ -91,6 +133,18 @@
                     0px 0px 4.32px #D23605,
                     0px 0px 2.16px #D23605;
             }
+        }
+    }
+
+    &__tabs-question {
+        @include mxw($lg) {
+            text-align: center;
+            span {
+                display: block;
+            }
+        }
+        @include mxw($md) {
+            text-align: right;
         }
     }
 

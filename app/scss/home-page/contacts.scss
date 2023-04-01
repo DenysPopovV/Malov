@@ -1,12 +1,30 @@
 .contacts {
-    margin-bottom: 150px;
+    padding-bottom: 150px;
+
+    @include mxw($sm) {
+        padding-bottom: 100px;
+    }
+
+    @include mxw($xs) {
+        padding-bottom: 50px;
+    }
 
     &__title {
         margin-bottom: 120px;
+
+        @include mxw($sm) {
+            margin-bottom: 50px;
+        }
+
+        @include mxw($xs) {
+            margin-bottom: 30px;
+        }
     }
 
     &__wrapper {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     &__content {
@@ -14,14 +32,30 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-
         border-right: 1px;
+
+        @include mxw($vlg) {
+            margin-bottom: 40px;
+            justify-content: space-between;
+        }
+
+        @include mxw($md) {
+            justify-content: center;
+        }
     }
 
     &__info {
         max-width: 653px;
         width: 100%;
         margin-right: 20px;
+
+        @include mxw($vlg) {
+            max-width: 100%;
+            order: 1;
+            display: flex;
+            flex-direction: column-reverse;
+            margin-right: 0;
+        }
     }
 
     &__decoration {
@@ -44,6 +78,25 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+
+            @include mxw($vlg) {
+                width: 154px;
+                height: 18px;
+                right: 28px;
+            }
+
+            @include mxw($md) {
+                display: none;
+            }
+        }
+
+        @include mxw($vlg) {
+            max-width: 345px;
+        }
+
+        @include mxw($xs) {
+            font-size: 12px;
+            line-height: 15px;
         }
     }
 
@@ -57,11 +110,26 @@
         }
 
         margin-bottom: 80px;
+
+        @include mxw($vlg) {
+            margin-bottom: 30px;
+        }
     }
 
     &__form {
         max-width: 480px;
         width: 100%;
+
+        @include mxw($vlg) {
+            order: 3;
+            transform: translateY(-60px);
+        }
+
+        @include mxw($md) {
+            order: 2;
+            transform: translateY(0);
+            margin-bottom: 30px;
+        }
     }
 
     &__form-name {
@@ -76,6 +144,12 @@
                 width: 100%;
             }
         }
+
+        @include mxw($xs) {
+            margin-bottom: 27px;
+        }
+
+
     }
 
     &__form-side {
@@ -89,6 +163,11 @@
         &::placeholder {
             opacity: 0.5;
         }
+
+        @include mxw($xs) {
+            font-size: 10px;
+            line-height: 12px;
+        }
     }
 
     &__services {
@@ -96,6 +175,11 @@
         font-size: 16px;
         line-height: 20px;
         margin-right: 25px;
+
+        @include mxw($xs) {
+            font-size: 12px;
+            line-height: 15px;
+        }
     }
 
     &__services-btn {
@@ -131,13 +215,16 @@
         &.active {
             transform: translateY(-5px) rotate(180deg);
         }
+
+        @include mxw($xs) {
+            margin-bottom: 30px;
+        }
     }
 
     &__filter {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin-bottom: 20px;
-
     }
 
     &__item {
@@ -152,6 +239,11 @@
 
         span {
             display: block;
+        }
+
+        @include mxw($xs) {
+            font-size: 11px;
+            line-height: 13px;
         }
     }
 
@@ -211,6 +303,15 @@
         &:hover::after {
             transform: translateX(-60px);
         }
+
+        @include mxw($xs) {
+            font-size: 12px;
+            line-height: 15px;
+
+            &:hover::after {
+                transform: translateX(-90px);
+            }
+        }
     }
 
     &__privacy {
@@ -221,9 +322,14 @@
         line-height: 24px;
         cursor: pointer;
         margin-bottom: 5px;
+
+        @include mxw($xs) {
+            font-size: 12px;
+            line-height: 15px;
+        }
     }
 
-    &__danger{
+    &__danger {
         position: absolute;
         display: none;
         font-weight: 400;
@@ -232,6 +338,12 @@
         color: red;
         top: 90px;
         right: 5px;
+
+        @include mxw($md) {
+            right: 5px;
+            top: 28px;
+            font-size: 14px;
+        }
     }
 
     &__location {
@@ -240,6 +352,19 @@
         font-weight: 500;
         font-size: 22px;
         line-height: 27px;
+
+        @include mxw($vlg) {
+            order: 2;
+            max-width: 345px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include mxw($md) {
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 100%;
+        }
     }
 
     &__location-card {
@@ -248,6 +373,15 @@
         &:last-child {
             margin-right: 0;
         }
+
+        @include mxw($vlg) {
+            margin: 0 0 40px 0;
+        }
+
+        @include mxw($sm) {
+            margin: 0 40px 0 0;
+        }
+
     }
 
     &__text-title,
@@ -257,26 +391,16 @@
         font-size: 22px;
         line-height: 27px;
         margin-bottom: 15px;
-    }
 
-    &__text-title {
-        position: relative;
-        padding-left: 10px;
+        @include mxw($sm) {
+            font-size: 16px;
+            line-height: 19px;
+        }
 
-        &::after {
-            content: '';
-            position: absolute;
-            width: 3px;
-            height: 45px;
-            left: -2px;
-            top: -8px;
-            background-color: $accent;
-            box-shadow: 0px 0px 173.88px #5CB1FF,
-                0px 0px 99.36px #5CB1FF,
-                0px 0px 57.96px #5CB1FF,
-                0px 0px 28.98px #5CB1FF,
-                0px 0px 8.28px #5CB1FF,
-                0px 0px 4.14px #5CB1FF;
+        @include mxw($xs) {
+            font-size: 13px;
+            line-height: 16px;
+            width: 92px;
         }
     }
 
@@ -285,6 +409,16 @@
         font-size: 20px;
         line-height: 24px;
         color: $border;
+
+        @include mxw($sm) {
+            font-size: 17px;
+            line-height: 20px;
+        }
+
+        @include mxw($xs) {
+            font-size: 11px;
+            line-height: 13px;
+        }
     }
 
     &__inst {
@@ -295,6 +429,11 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+
+        @include mxw($xs) {
+            width: 21px;
+            height: 21px;
+        }
     }
 
     &__us {
@@ -304,6 +443,78 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+
+        @include mxw($vlg) {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            text-align: center;
+            padding-top: 13px;
+            max-width: 100%;
+            border-left: transparent;
+            border-top: 2px solid $border;
+        }
+    }
+
+    &__text-title {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 45px;
+            left: -22px;
+            top: -8px;
+            background-color: $accent;
+            box-shadow: 0px 0px 173.88px #5CB1FF,
+                0px 0px 99.36px #5CB1FF,
+                0px 0px 57.96px #5CB1FF,
+                0px 0px 28.98px #5CB1FF,
+                0px 0px 8.28px #5CB1FF,
+                0px 0px 4.14px #5CB1FF;
+
+            @include mxw($vlg) {
+                top: -35px;
+                left: 50%;
+                transform: rotate(90deg) translateX(-50%);
+            }
+        }
+    }
+
+    &__connect {
+        padding-left: 20px;
+
+        @include mxw($vlg) {
+            padding-left: 0;
+
+            &:nth-child(1) {
+                order: 1;
+                text-align: left;
+
+                .contacts__text-title {
+                    &::after {
+                        left: 22px;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                order: 3;
+                text-align: right;
+
+                .contacts__text-title {
+                    &::after {
+                        left: 70px;
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                order: 2;
+            }
+
+        }
     }
 
     &__link,
@@ -314,15 +525,18 @@
         line-height: 20px;
         color: $border;
         margin-bottom: 7px;
-        padding-left: 14px;
 
         &:last-child {
             margin-bottom: 0;
         }
+
+        @include mxw($xs) {
+            font-size: 11px;
+            line-height: 13px;
+        }
     }
 
     &__social {
-        margin-left: 10px;
         display: inline-block;
         width: 43px;
         height: 43px;
@@ -330,5 +544,10 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+
+        @include mxw($xs) {
+            width: 30px;
+            height: 30px;
+        }
     }
 }
