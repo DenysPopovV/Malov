@@ -150,7 +150,7 @@ input {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    padding: 17px 28px;
+    padding: 17px 38px;
     position: relative;
     margin-right: 80px;
 
@@ -184,6 +184,9 @@ input {
             transform: rotate(-2deg);
         }
     }
+    @include mxw($md) {
+        margin-right: 0;
+    }
 
 }
 
@@ -195,6 +198,11 @@ input {
         background-color: $white;
         border-radius: 50%;
         transition: box-shadow .5s linear;
+
+        @include mxw($xs) {
+            width: 35px;
+            height: 35px;
+        }
 
         &::after {
             content: '';
@@ -208,6 +216,12 @@ input {
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+
+            @include mxw($xs) {
+                width: 25px;
+                height: 25px;
+                border-radius: 0;
+            }
         }
 
         &--inst::after {

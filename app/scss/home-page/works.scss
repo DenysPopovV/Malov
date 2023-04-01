@@ -120,12 +120,12 @@
         -webkit-text-stroke: 3px $text;
 
 
-        
+
         @include mxw($md) {
             font-size: 90px;
             right: -10px;
         }
-       
+
         @include mxw($sm) {
             font-size: 70px;
             right: 0px;
@@ -188,6 +188,8 @@
         }
 
         @include mxw($xs) {
+            font-size: 12px;
+            line-height: 15px;
             padding: 9px 28px;
             transform: translate(-20px, -20px);
         }

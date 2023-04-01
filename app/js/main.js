@@ -26,6 +26,7 @@
 //   swiperSlides[currentSlide].classList.add('swiper-slide-active');
 // });
 
+
 $(function () {
   const headerHeight = $('.header__box').outerHeight();
 
@@ -36,10 +37,6 @@ $(function () {
 
     let scrollPoint = $(scrollAnchor).offset().top - headerHeight;
 
-    if (scrollAnchor === '#faq') {
-      scrollPoint = scrollPoint - 150;
-    }
-
     $('body,html').animate({
       scrollTop: scrollPoint
     }, 500);
@@ -47,7 +44,6 @@ $(function () {
     return false;
   });
 });
-
 
 const tabBtn = document.querySelectorAll('.tab-btn');
 const tabsItems = document.querySelectorAll('.tab-item');
