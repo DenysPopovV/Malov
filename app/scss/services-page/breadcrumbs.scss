@@ -1,6 +1,5 @@
 .breadcrumbs {
-    
-
+    margin-bottom: 40px;
     &__box {
         display: flex;
         flex-direction: column;
@@ -11,12 +10,20 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: 500px 200px;
+
+        @include mxw($md) {
+            background-size: 190px 65px;
+            height: calc(40vh - 114px);
+        }
     }
     &__list{
         display: flex;
         justify-content: space-between;
         transform: translateY(90px);
 
+        @include mxw($md) {
+            transform: translateY(50px);
+        }
     }
 
     &__item{
@@ -28,7 +35,6 @@
                 position: absolute;
                 width: 20px;
                 height: 8px;
-                // background-color: #000;
                 right: 10px;
                 top: 12px;
                 background-image: url('../images/sprite.svg#breadcrumbs-btn');
@@ -42,5 +48,18 @@
             padding-right: 0;
         }
 
+        @include mxw($xs) {
+            &:first-child{
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 15px;
+                    height: 6px;
+                    right: 13px;
+                    top: 6px;
+
+                }
+            }
+        }
     }
 }

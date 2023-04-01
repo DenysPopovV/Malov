@@ -51,7 +51,7 @@ $(function () {
 
 const tabBtn = document.querySelectorAll('.tab-btn');
 const tabsItems = document.querySelectorAll('.tab-item');
-const closeBtn = document.querySelectorAll('.services__card-close');
+const closeTabBtns = document.querySelectorAll('.close-tab-btn');
 
 tabBtn.forEach(onTabClick)
 
@@ -77,8 +77,16 @@ function onTabClick(item) {
       currentTab.classList.add("active");
     }
 
-    closeBtn.forEach(function (currentBtn) {
-      currentBtn.classList.remove("active");
+    closeTabBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const activeTabBtn = document.querySelector('.tab-btn.active');
+        const activeTab = document.querySelector('.tab-item.active');
+
+        if (activeTabBtn !== null && activeTab !== null) {
+          activeTabBtn.classList.remove('active');
+          activeTab.classList.remove('active');
+        }
+      });
     });
 
   });
