@@ -27,29 +27,27 @@
 // });
 
 
-const headerHeight = $('.header__box').outerHeight();
+$(function () {
+  const headerHeight = $('.header__box').outerHeight();
 
-$(".header__menu-link").on("click", function (event) {
-  event.preventDefault();
+  $(".scroll").on("click", function (event) {
+    event.preventDefault();
 
-  const scrollAnchor = $(this).attr('href');
+    const scrollAnchor = $(this).attr('href');
 
-  let scrollPoint = $(scrollAnchor).offset().top - headerHeight;
+    let scrollPoint = $(scrollAnchor).offset().top - headerHeight;
 
-  if (scrollAnchor === '#faq') {
-    scrollPoint = scrollPoint - 150;
-  }
+    $('body,html').animate({
+      scrollTop: scrollPoint
+    }, 500);
 
-  $('body,html').animate({
-    scrollTop: scrollPoint
-  }, 500);
-
-  return false;
+    return false;
+  });
 });
 
 const tabBtn = document.querySelectorAll('.tab-btn');
 const tabsItems = document.querySelectorAll('.tab-item');
-const closeBtn = document.querySelectorAll('.services__card-close');
+const closeTabBtn = document.querySelector('.close-tab-btn');
 
 tabBtn.forEach(onTabClick)
 
@@ -75,8 +73,12 @@ function onTabClick(item) {
       currentTab.classList.add("active");
     }
 
-    closeBtn.forEach(function (currentBtn){
-      currentBtn.classList.remove("active");
+    closeTabBtn.addEventListener('click', function () {
+      const activeTabBtn = document.querySelector('.tab-btn.active');
+      const activeTab = document.querySelector('.tab-item.active');
+
+      activeTabBtn.classList.remove('active');
+      activeTab.classList.remove('active');
     });
 
   });
