@@ -1,30 +1,30 @@
 
-const swiperContainer = document.querySelector('.swiper-container');
-const swiperWrapper = swiperContainer.querySelector('.swiper-wrapper');
-const swiperSlides = swiperWrapper.querySelectorAll('.swiper-slide');
-const swiperPrevButton = swiperContainer.querySelector('.swiper-button-prev');
-const swiperNextButton = swiperContainer.querySelector('.swiper-button-next');
-let currentSlide = 0;
+// const swiperContainer = document.querySelector('.swiper-container');
+// const swiperWrapper = swiperContainer.querySelector('.swiper-wrapper');
+// const swiperSlides = swiperWrapper.querySelectorAll('.swiper-slide');
+// const swiperPrevButton = swiperContainer.querySelector('.swiper-button-prev');
+// const swiperNextButton = swiperContainer.querySelector('.swiper-button-next');
+// let currentSlide = 0;
 
-swiperSlides[currentSlide].classList.add('swiper-slide-active');
+// swiperSlides[currentSlide].classList.add('swiper-slide-active');
 
-swiperPrevButton.addEventListener('click', () => {
-  swiperSlides[currentSlide].classList.remove('swiper-slide-active');
-  currentSlide--;
-  if (currentSlide < 0) {
-    currentSlide = swiperSlides.length - 1;
-  }
-  swiperSlides[currentSlide].classList.add('swiper-slide-active');
-});
+// swiperPrevButton.addEventListener('click', () => {
+//   swiperSlides[currentSlide].classList.remove('swiper-slide-active');
+//   currentSlide--;
+//   if (currentSlide < 0) {
+//     currentSlide = swiperSlides.length - 1;
+//   }
+//   swiperSlides[currentSlide].classList.add('swiper-slide-active');
+// });
 
-swiperNextButton.addEventListener('click', () => {
-  swiperSlides[currentSlide].classList.remove('swiper-slide-active');
-  currentSlide++;
-  if (currentSlide >= swiperSlides.length) {
-    currentSlide = 0;
-  }
-  swiperSlides[currentSlide].classList.add('swiper-slide-active');
-});
+// swiperNextButton.addEventListener('click', () => {
+//   swiperSlides[currentSlide].classList.remove('swiper-slide-active');
+//   currentSlide++;
+//   if (currentSlide >= swiperSlides.length) {
+//     currentSlide = 0;
+//   }
+//   swiperSlides[currentSlide].classList.add('swiper-slide-active');
+// });
 
 
 
@@ -32,6 +32,7 @@ swiperNextButton.addEventListener('click', () => {
 
 const tabBtn = document.querySelectorAll('.tab-btn');
 const tabsItems = document.querySelectorAll('.tab-item');
+const closeBtn = document.querySelectorAll('.services__card-close');
 
 tabBtn.forEach(onTabClick)
 
@@ -56,6 +57,11 @@ function onTabClick(item) {
       currentBtn.classList.add("active");
       currentTab.classList.add("active");
     }
+
+    closeBtn.forEach(function (currentBtn){
+      currentBtn.classList.remove("active");
+    });
+
   });
 }
 

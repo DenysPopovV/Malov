@@ -196,7 +196,6 @@
         position: relative;
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
 
         &:last-child {
             margin-bottom: 0;
@@ -227,7 +226,6 @@
     &__danger{
         position: absolute;
         display: none;
-
         font-weight: 400;
         font-size: 20px;
         line-height: 24px;

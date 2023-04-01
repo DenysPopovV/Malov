@@ -368,15 +368,14 @@
                         </label>
                     </div>
                     <div class="contacts__btn">
-                        <button class="contacts__submit button__arrow" type="submit" >Send</button>
+                        <button class="contacts__submit button__arrow" type="submit" onclick="success()">Send</button>
                         <label class="contacts__privacy" for="privacy">
-                            <input class="contacts__variant" type="checkbox" id="privacy" name="privacy">
+                            <input class="contacts__variant" type="checkbox" id="privacy" name="privacy" required>
                             <span class="contacts__checkbox"></span>
                             privacy policy
                         </label>
                         <p class="contacts__danger" id="danger">Incorrect field value! Try again!</p>
-                    </div>
-
+                    </div>           
                 </form>
                 <ul class="contacts__location">
                     <li class="contacts__location-card">
