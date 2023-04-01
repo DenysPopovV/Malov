@@ -26,26 +26,28 @@
 //   swiperSlides[currentSlide].classList.add('swiper-slide-active');
 // });
 
+$(function () {
+  const headerHeight = $('.header__box').outerHeight();
 
-const headerHeight = $('.header__box').outerHeight();
+  $(".scroll").on("click", function (event) {
+    event.preventDefault();
 
-$(".header__menu-link").on("click", function (event) {
-  event.preventDefault();
+    const scrollAnchor = $(this).attr('href');
 
-  const scrollAnchor = $(this).attr('href');
+    let scrollPoint = $(scrollAnchor).offset().top - headerHeight;
 
-  let scrollPoint = $(scrollAnchor).offset().top - headerHeight;
+    if (scrollAnchor === '#faq') {
+      scrollPoint = scrollPoint - 150;
+    }
 
-  if (scrollAnchor === '#faq') {
-    scrollPoint = scrollPoint - 150;
-  }
+    $('body,html').animate({
+      scrollTop: scrollPoint
+    }, 500);
 
-  $('body,html').animate({
-    scrollTop: scrollPoint
-  }, 500);
-
-  return false;
+    return false;
+  });
 });
+
 
 const tabBtn = document.querySelectorAll('.tab-btn');
 const tabsItems = document.querySelectorAll('.tab-item');
@@ -75,7 +77,7 @@ function onTabClick(item) {
       currentTab.classList.add("active");
     }
 
-    closeBtn.forEach(function (currentBtn){
+    closeBtn.forEach(function (currentBtn) {
       currentBtn.classList.remove("active");
     });
 
