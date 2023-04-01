@@ -1,8 +1,24 @@
 .reviews {
     padding-bottom: 150px;
 
+    @include mxw($sm) {
+        padding-bottom: 100px;
+    }
+
+    @include mxw($xs) {
+        padding-bottom: 50px;
+    }
+
     &__title {
         margin-bottom: 150px;
+
+        @include mxw($sm) {
+            margin-bottom: 70px;
+        }
+
+        @include mxw($xs) {
+            margin-bottom: 90px;
+        }
     }
 
     &__center {
@@ -10,15 +26,59 @@
         justify-content: center;
         background-position: center;
         background-repeat: no-repeat;
+
+        @include mxw($lg) {
+            background-size: 860px 460px;
+            width: 100%;
+            min-height: 485px;
+        }
+
+        @include mxw($md) {
+            background-size: 700px 510px;
+        }
+
+        @include mxw($sm) {
+            background-size: 487px 510px;
+        }
+
+        @include mxw($xs) {
+            background-size: 0;
+        }
     }
 
     .swiper-container {
         position: relative;
-        width: 1095px;
-        height: 486px;
+        max-width: 1095px;
+        width: 100%;
+        min-height: 486px;
         padding: 30px 86px;
         background-color: #222;
         border-radius: 20px;
+        margin: 0 80px;
+
+        @include mxw($lg) {
+            max-width: 780px;
+            margin: 0 40px;
+            padding: 30px 60px;
+        }
+
+        @include mxw($md) {
+            max-width: 629px;
+            min-height: 550px;
+        }
+
+        @include mxw($sm) {
+            padding: 30px 15px;
+            max-width: 433px;
+        }
+
+        @include mxw($xs) {
+            padding: 36px 18px;
+            max-width: 281px;
+            margin: 0;
+            min-height: 446px;
+            height: 410px;
+        }
     }
 
     .swiper-wrapper {
@@ -61,19 +121,29 @@
             0px 0px 13.68px #5CB1FF,
             0px 0px 6.84px #5CB1FF;
 
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 10px;
+            background-image: url('../images/sprite.svg#arrow');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        @include mxw($sm) {
+            width: 30px;
+            height: 30px;
+
             &::after {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 40px;
+                width: 20px;
                 height: 10px;
-                background-image: url('../images/sprite.svg#arrow');
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
             }
+        }
     }
 
     .swiper-button-prev {
@@ -82,10 +152,26 @@
         &::after {
             transform: translate(-50%, -50%) rotate(180deg);
         }
+
+        @include mxw($lg) {
+            left: -90px;
+        }
+
+        @include mxw($sm) {
+            left: -35px;
+        }
     }
 
     .swiper-button-next {
         right: -116px;
+
+        @include mxw($lg) {
+            right: -90px;
+        }
+
+        @include mxw($sm) {
+            right: -35px;
+        }
     }
 
     &__swiper-box {
@@ -103,6 +189,18 @@
             font-weight: 400;
             font-size: 17px;
             line-height: 21px;
+
+            @include mxw($xs) {
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+
+        @include mxw($xs) {
+            font-size: 14px;
+            line-height: 17px;
+            text-shadow: 0px 0px 260.82px #fff,
+                0px 0px 149.04px #fff;
         }
     }
 
@@ -111,13 +209,58 @@
         top: -132px;
         left: 50%;
         transform: translateX(-50%);
+
+        img {
+            width: 201px;
+            height: 201px;
+            object-fit: cover;
+
+            @include mxw($md) {
+                width: 151px;
+                height: 151px;
+            }
+
+            @include mxw($xs) {
+                width: 101px;
+                height: 101px;
+            }
+        }
+
+        @include mxw($xs) {
+            top: -87px;
+        }
     }
 
     &__swiper-text {
+
+
+        display: flex;
+        min-height: 80%;
+        flex-direction: column;
+        justify-content: center;
+
         p {
             padding-left: 25px;
             color: #fff;
             margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include mxw($lg) {
+                font-size: 18px;
+            }
+
+            @include mxw($sm) {
+                font-size: 14px;
+                padding-left: 0;
+            }
+
+            @include mxw($xs) {
+                font-size: 12px;
+                line-height: 15px;
+            }
         }
     }
 }

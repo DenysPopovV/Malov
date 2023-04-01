@@ -12,11 +12,11 @@
     }
 }
 
-
 $xs: 560;
 $sm: 768;
 $md: 992;
 $lg: 1200;
+$vlg: 1465;
 
 @mixin mxw($width) {
     @media (max-width: #{$width}px) {

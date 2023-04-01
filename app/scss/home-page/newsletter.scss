@@ -1,8 +1,24 @@
 .newsletter {
     padding-bottom: 150px;
-    
+
+    @include mxw($sm) {
+        padding-bottom: 100px;
+    }
+
+    @include mxw($xs) {
+        padding-bottom: 50px;
+    }
+
     &__title {
         margin-bottom: 90px;
+
+        @include mxw($sm) {
+            margin-bottom: 50px;
+        }
+
+        @include mxw($xs) {
+            margin-bottom: 30px;
+        }
     }
 
     &__box {
@@ -13,6 +29,13 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+
+        @include mxw($sm) {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__text {
@@ -27,12 +50,24 @@
         justify-content: space-between;
         max-width: 741px;
         width: 100%;
+
+        @include mxw($sm) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 
     &__form {
         position: relative;
         max-width: 511px;
         width: 100%;
+
+        @include mxw($sm) {
+            margin: 0 10px 10px 0;
+        }
+        @include mxw($xs) {
+            margin: 0 0 10px 0;
+        }
     }
 
     &__mail {
@@ -46,6 +81,16 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
+
+        @include mxw($xs) {
+            padding: 15px 200px 15px 16px;
+
+            &::placeholder {
+                font-size: 12px;
+                line-height: 15px;
+            }
+
+        }
     }
 
     &__btn {
@@ -65,12 +110,25 @@
             background-color: $accent;
             color: $white;
         }
+
+        @include mxw($xs) {
+            top: 6px;
+            right: 6px;
+            font-size: 12px;
+            line-height: 15px;
+            padding: 12px 36px;
+        }
     }
 
     &__media {
         padding: 15px 28px 15px 22px;
         border: 1px solid $accent;
         border-radius: 60px;
+        height: 66px;
+        @include mxw($xs) {
+            padding: 10px 10px;
+            height: 42px;
+        }
     }
 
     &__icon {
@@ -79,6 +137,10 @@
         height: 25px;
         display: inline-block;
         margin-right: 38px;
+
+        @include mxw($xs) {
+            margin-right: 20px;
+        }
 
         &:last-child {
             margin-right: 0;
@@ -93,6 +155,11 @@
             background-size: cover;
             background-position: center;
             filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(238deg) brightness(105%) contrast(100%);
+
+            @include mxw($xs) {
+                width: 20px;
+                height: 20px;
+            }
         }
 
         &--inst::after {
@@ -104,6 +171,10 @@
             width: 40px;
             height: 40px;
             background-image: url('../images/sprite.svg#contacts-up');
+            @include mxw($xs) {
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 

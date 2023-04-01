@@ -27,8 +27,25 @@ swiperNextButton.addEventListener('click', () => {
 });
 
 
+const headerHeight = $('.header__box').outerHeight();
 
+$(".header__menu-link").on("click", function (event) {
+  event.preventDefault();
 
+  const scrollAnchor = $(this).attr('href');
+
+  let scrollPoint = $(scrollAnchor).offset().top - headerHeight;
+
+  if (scrollAnchor === '#faq') {
+    scrollPoint = scrollPoint - 150;
+  }
+
+  $('body,html').animate({
+    scrollTop: scrollPoint
+  }, 500);
+
+  return false;
+});
 
 const tabBtn = document.querySelectorAll('.tab-btn');
 const tabsItems = document.querySelectorAll('.tab-item');

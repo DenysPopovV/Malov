@@ -2,7 +2,11 @@
     padding-bottom: 150px;
 
     @include mxw($sm) {
-        padding-bottom: 90px;
+        padding-bottom: 100px;
+    }
+
+    @include mxw($xs) {
+        padding-bottom: 50px;
     }
 
     &__title {
@@ -29,6 +33,11 @@
 
         &.active::after {
             transform: translateX(0);
+
+            @include mxw($sm) {
+                transform: translateX(-60px);
+            }
+
         }
     }
 
