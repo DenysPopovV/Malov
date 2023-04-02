@@ -21,7 +21,7 @@
             <nav class="header__menu">
                 <ul class="header__menu-list">
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="#">
+                        <a class="header__menu-link" href="portfolio.html">
                             Portfolio
                         </a>
                     </li>
@@ -48,9 +48,9 @@
                 </ul>
             </nav>
 
-            <button class="header__button hover__btn scroll" type="button">
+            <a class="header__button hover__btn scroll" href="#contact">
                 Contact us
-            </button>
+            </a>
 
             <button class="header-mobile__open tab-btn" data-tab="#tab_13">
                 <span></span>
@@ -62,7 +62,7 @@
             <div class="header-mobile__top">
                 <img class="header-mobile__logo" src="images/logo.svg" alt="Logo of company">
                 <button class="header-mobile__close close-tab-btn">
-                    
+                    <span class="sr-only">Button close mobile menu</span>
                 </button>
             </div>
             <nav class="header-mobile__navigation">
@@ -96,10 +96,14 @@
             </nav>
             <div class="header-mobile__bottom">
                 <div class="header-mobile__bottom-box">
-                    <a class="header-mobile__social social__icons social__icons--inst" href="#"></a>
-                    <a class="header-mobile__social social__icons social__icons--up" href="#"></a>
+                    <a class="header-mobile__social social__icons social__icons--inst" href="#">
+                        <span class="sr-only">link to open Instagram</span>
+                    </a>
+                    <a class="header-mobile__social social__icons social__icons--up" href="#">
+                        <span class="sr-only">link to open Upwork</span>
+                    </a>
                 </div>
-                <a class="header-mobile__connect hover__btn" href="#">Contact us</a>
+                <a class="header-mobile__connect hover__btn close-tab-btn scroll" href="#contact">Contact us</a>
             </div>
         </div>
     </div>
