@@ -1,6 +1,7 @@
 .popup-form {
     position: absolute;
-    width: 772px;
+    max-width: 772px;
+    width: 100%;
     height: 338px;
     padding: 24px;
     border-radius: 5px;
@@ -87,10 +88,22 @@
     &__text {
         max-width: 554px;
         margin-bottom: 37px;
+
+        @include mxw($sm) {
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            max-width: 296px;
+            margin: 0 auto;
+            margin-bottom: 35px;
+        }
     }
 
     &__navigation {
         display: flex;
+        @include mxw($sm) {
+            justify-content: center;
+        }
     }
 
     &__social {
@@ -107,6 +120,12 @@
                 margin-right: 0;
             }
         }
+
+        @include mxw($sm) {
+            transform: translateY(0);
+            margin-right: 0;
+            justify-content: space-around;
+        }
     }
 
     &__contact {
@@ -122,6 +141,16 @@
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+
+        @include mxw($sm) {
+            display: none;
+        }
+    }
+
+    &__time {
+        @include mxw($sm) {
+            display: none;
         }
     }
 

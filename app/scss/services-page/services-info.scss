@@ -30,6 +30,7 @@
             align-items: center;
             justify-content: space-around;
         }
+
         @include mxw($sm) {
             flex-direction: column;
         }
@@ -52,6 +53,7 @@
             min-height: 485px;
             transform: translateY(0);
         }
+
         @include mxw($sm) {
             margin-bottom: 65px;
         }
@@ -355,7 +357,7 @@
 
         &:checked {
             &+.services__checkbox {
-                box-shadow: 0 0 10px 3px $accent;
+
 
                 &::after {
                     content: '';
@@ -372,16 +374,13 @@
         cursor: pointer;
         border: 1px solid $border;
         margin-right: 10px;
-        border-radius: 50%;
-        transition: box-shadow .5s linear;
 
         &::after {
             content: '';
             position: absolute;
             width: 100%;
             height: 100%;
-            border-radius: 50%;
-            background-color: $accent;
+            background-color: $border;
             opacity: 0;
             transition: opacity .5s ease-in-out;
         }
@@ -474,6 +473,12 @@
             background-color: $white;
             top: 200px;
         }
+
+        @include mxw($sm) {
+            &::after {
+                top: 90px;
+            }
+        }
     }
 
     &__card-close {
@@ -510,11 +515,27 @@
         line-height: 78px;
         color: #E3E3E3;
         padding: 53px 0 70px 66px;
+
+        @include mxw($lg) {
+            font-size: 48px;
+            line-height: 78px;
+            padding-left: 20px;
+        }
+
+        @include mxw($sm) {
+            font-size: 22px;
+            line-height: 29px;
+            padding: 50px 0 25px 0;
+        }
     }
 
     &__card-box {
         display: flex;
         justify-content: space-between;
+
+        @include mxw($vlg) {
+            flex-direction: column;
+        }
     }
 
     &__card-info {
@@ -522,6 +543,16 @@
         width: 100%;
         padding: 45px 15px 0 30px;
         border-right: 1px solid $white;
+
+        @include mxw($vlg) {
+            max-width: 100%;
+            border: transparent;
+            padding-left: 20px;
+        }
+
+        @include mxw($sm) {
+            padding: 15px 25px 0 25px;
+        }
     }
 
     &__card-text {
@@ -534,16 +565,28 @@
                 margin-bottom: 0;
             }
         }
+
+        @include mxw($vlg) {
+            margin-bottom: 20px;
+        }
     }
 
     &__card-media {
         width: 160px;
         display: flex;
         justify-content: space-between;
+
+        @include mxw($sm) {
+            display: none;
+        }
     }
 
     &__card-scope {
         padding: 36px 0 50px 13px;
+
+        @include mxw($sm) {
+            padding: 15px 25px 0 25px;
+        }
     }
 
     &__card-title {
@@ -552,10 +595,20 @@
         font-size: 40px;
         line-height: 49px;
         margin-bottom: 33px;
+
+        @include mxw($sm) {
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 8px;
+        }
     }
 
     &__card-list {
         margin-bottom: 77px;
+
+        @include mxw($vlg) {
+            margin-bottom: 50px;
+        }
     }
 
     &__card-item {
@@ -564,12 +617,20 @@
         &:last-child {
             margin-bottom: 0;
         }
+
+        @include mxw($vlg) {
+            margin-bottom: 8px;
+        }
     }
 
     &__card-btn {
         width: 100%;
         display: flex;
         justify-content: flex-end;
+
+        @include mxw($vlg) {
+            justify-content: center;
+        }
     }
 
     &__card-conect {
@@ -581,31 +642,9 @@
         &::before {
             filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(212deg) brightness(111%) contrast(101%);
         }
-
-    }
-}
-
-.remove-button {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    right: 18px;
-    top: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &::after,
-    &::before {
-        content: '';
-        position: absolute;
-        width: 24px;
-        height: 1px;
-        background-color: $white;
-        transform: rotate(45deg);
-    }
-
-    &::before {
-        transform: rotate(-45deg);
+        @include mxw($vlg) {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
     }
 }
