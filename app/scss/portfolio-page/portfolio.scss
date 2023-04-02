@@ -1,0 +1,191 @@
+.portfolio {
+    padding-bottom: 150px;
+
+    @include mxw($sm) {
+        padding-bottom: 100px;
+    }
+
+    @include mxw($xs) {
+        padding-bottom: 80px;
+    }
+
+    &__title {
+        margin-bottom: 90px;
+
+        @include mxw($sm) {
+            margin-bottom: 50px;
+        }
+
+        @include mxw($xs) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        margin: 0 auto 100px;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1170px;
+        grid-row-gap: 75px;
+
+        @include mxw($lg) {
+            max-width: 930px;
+            grid-column-gap: 35px;
+        }
+
+        @include mxw($sm) {
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 50px;
+        }
+
+        @include mxw($xs) {
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 0;
+            max-width: 360px;
+        }
+    }
+
+    &__list-item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 80px;
+
+        filter: drop-shadow(-126px 226px 104px rgba(0, 0, 0, 0.01)) drop-shadow(-71px 127px 88px rgba(0, 0, 0, 0.05)) drop-shadow(-32px 57px 65px rgba(0, 0, 0, 0.09)) drop-shadow(-8px 14px 36px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+
+        &:nth-child(2), 
+        &:nth-child(5) {
+            transform: translateY(80px);
+
+            @include mxw($sm) {
+                transform: translateY(120px);
+            }
+        }
+
+        &:nth-child(3),
+        &:nth-child(6) {
+            transform: translateY(160px);
+
+            @include mxw($sm) {
+                transform: translateY(70px);
+            }
+        }
+    }
+
+    &__list-name {
+        position: absolute;
+        left: 0;
+        top: 0;
+        writing-mode: vertical-lr;
+
+        @include mxw($md) {
+            left: -20px;
+        }
+
+        @include mxw($sm) {
+            left: -10px;
+        }
+
+        @include mxw($xs) {
+            font-size: 13px;
+            line-height: 16px;
+            left: 0;
+        }
+    }
+
+    &__list-img {
+        width: 290px;
+        height: 566px;
+        border-radius: 30px;
+        object-fit: cover;
+        cursor: pointer;
+
+        @include mxw($lg) {
+            width: 218px;
+            height: 426px;
+        }
+
+        @include mxw($xs) {
+            width: 116px;
+            height: 227px;
+            border-radius: 10px;
+        }
+    }
+
+    &__list-number {
+        position: absolute;
+        right: 10px;
+        bottom: 50px;
+        font-size: 120px;
+        line-height: 86px;
+        font-weight: 900;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 3px $text;
+        @include mxw($md) {
+            font-size: 90px;
+            right: -10px;
+        }
+
+        @include mxw($sm) {
+            font-size: 70px;
+            right: 0px;
+        }
+
+        @include mxw($xs) {
+            display: none;
+            font-size: 70px;
+            right: 0px;
+        }
+    }
+
+    &__list-button {
+        bottom: 0;
+        transform: rotate(90deg);
+    }
+
+    &__button-box {
+        @include mxw($sm) {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__btn {
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        position: relative;
+        overflow: hidden;
+        padding: 15px 41px;
+        font-size: 16px;
+        color: $border;
+        background-color: transparent;
+        border: 1px solid $border;
+        transition: all 0.5s ease-in;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 55%;
+            transform: translateX(-50%) scaleY(1) scaleX(1.45);
+            top: 180%;
+            width: 160%;
+            height: 190%;
+            background-color: $border;
+            border-radius: 50%;
+            display: block;
+            transition: all 0.8s 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+            z-index: -1;
+        }
+
+        &:hover {
+            color: $white;
+            border: 1px solid $white;
+        }
+
+        &:hover::after {
+            top: -45%;
+            background-color: $border;
+        }
+    }
+}

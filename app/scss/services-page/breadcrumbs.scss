@@ -1,5 +1,7 @@
 .breadcrumbs {
     margin-bottom: 40px;
+    padding-top: 115px;
+
     &__box {
         display: flex;
         flex-direction: column;
@@ -16,7 +18,8 @@
             height: calc(40vh - 114px);
         }
     }
-    &__list{
+
+    &__list {
         display: flex;
         justify-content: space-between;
         transform: translateY(90px);
@@ -26,11 +29,12 @@
         }
     }
 
-    &__item{
+    &__item {
         padding-right: 40px;
         position: relative;
-        &:first-child{
-            &::after{
+
+        &:first-child {
+            &::after {
                 content: '';
                 position: absolute;
                 width: 20px;
@@ -44,13 +48,13 @@
             }
         }
 
-        &:last-child{
+        &:last-child {
             padding-right: 0;
         }
 
         @include mxw($xs) {
-            &:first-child{
-                &::after{
+            &:first-child {
+                &::after {
                     content: '';
                     position: absolute;
                     width: 15px;

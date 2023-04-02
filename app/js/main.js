@@ -34,7 +34,6 @@ window.addEventListener('scroll', function () {
   menuFixed.classList.toggle('sticky', scrollTop >= 100);
   menuFixed.classList.toggle('animation', scrollTop >= 200);
   menuFixed.classList.toggle('opacity', scrollTop >= 350);
-  heroPadding.classList.toggle('menu-padding', scrollTop >= 350);
 });
 
 $(function () {
