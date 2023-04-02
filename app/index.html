@@ -48,26 +48,32 @@
                 </ul>
             </nav>
 
-            <button class="header__button hover__btn scroll" type="button">
+            <a class="header__button hover__btn scroll" href="#contact">
                 Contact us
-            </button>
+            </a>
 
+            <button class="header-mobile__open tab-btn" data-tab="#tab_13">
+                <span></span>
+                <span class="sr-only">Button open mobile menu</span>
+            </button>
         </div>
 
-        <div class="header-mobile">
+        <div class="header-mobile tab-item lock-body" id="tab_13">
             <div class="header-mobile__top">
                 <img class="header-mobile__logo" src="images/logo.svg" alt="Logo of company">
-                <button class="header-mobile__close"></button>
+                <button class="header-mobile__close close-tab-btn">
+                    <span class="sr-only">Button close mobile menu</span>
+                </button>
             </div>
             <nav class="header-mobile__navigation">
                 <ul class="header-mobile__list">
                     <li class="header-mobile__item">
-                        <a class="header-mobile__link" href="#">
+                        <a class="header-mobile__link " href="#">
                             Services
                         </a>
                     </li>
                     <li class="header-mobile__item">
-                        <a class="header-mobile__link" href="#">
+                        <a class="header-mobile__link close-tab-btn scroll" href="#contact">
                             Contacts
                         </a>
                     </li>
@@ -82,7 +88,7 @@
                         </a>
                     </li>
                     <li class="header-mobile__item">
-                        <a class="header-mobile__link" href="#">
+                        <a class="header-mobile__link close-tab-btn scroll" href="#faq">
                             FAQ
                         </a>
                     </li>
@@ -90,10 +96,14 @@
             </nav>
             <div class="header-mobile__bottom">
                 <div class="header-mobile__bottom-box">
-                    <a class="header-mobile__social social__icons social__icons--inst" href="#"></a>
-                    <a class="header-mobile__social social__icons social__icons--up" href="#"></a>
+                    <a class="header-mobile__social social__icons social__icons--inst" href="#">
+                        <span class="sr-only">link to open Instagram</span>
+                    </a>
+                    <a class="header-mobile__social social__icons social__icons--up" href="#">
+                        <span class="sr-only">link to open Upwork</span>
+                    </a>
                 </div>
-                <a class="header-mobile__connect hover__btn" href="#">Contact us</a>
+                <a class="header-mobile__connect hover__btn close-tab-btn scroll" href="#contact">Contact us</a>
             </div>
         </div>
     </div>
@@ -331,8 +341,12 @@
                         </div>
                     </div>
 
-                    <div class="reviews__arrows swiper-button-prev"></div>
-                    <div class="reviews__arrows swiper-button-next"></div>
+                    <div class="reviews__arrows swiper-button-prev">
+                        <span class="sr-only">Button to swap previous slide</span>
+                    </div>
+                    <div class="reviews__arrows swiper-button-next">
+                        <span class="sr-only">Button to swap next slide</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -380,7 +394,9 @@
 
 
                     <span class="contacts__services">Services</span>
-                    <button class="contacts__services-btn tab-btn" type="button" data-tab="#tab_6"></button>
+                    <button class="contacts__services-btn tab-btn" type="button" data-tab="#tab_6">
+                        <span class="sr-only">a button that opens services</span>
+                    </button>
 
                     <div class="contacts__filter tab-item" id="tab_6">
                         <label class="contacts__item" for="troubleshooting">
@@ -428,7 +444,9 @@
                 <ul class="contacts__location">
                     <li class="contacts__location-card">
                         <span class="contacts__location-title">Connect us</span>
-                        <a class="contacts__inst" href="#"></a>
+                        <a class="contacts__inst" href="#">
+                            <span class="sr-only">link to open Instagram</span>
+                        </a>
                     </li>
                     <li class="contacts__location-card">
                         <span class="contacts__location-title">Canada</span>
@@ -448,7 +466,9 @@
                 </li>
                 <li class="contacts__connect">
                     <span class="contacts__text-title">We on</span>
-                    <a class="contacts__social" href="#"></a>
+                    <a class="contacts__social" href="#">
+                        <span class="sr-only">link to open Upwork</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -474,8 +494,12 @@
                     <button class="newsletter__btn" type="submit">Send</button>
                 </form>
                 <div class="newsletter__media">
-                    <a class="newsletter__icon newsletter__icon--inst" href="#"></a>
-                    <a class="newsletter__icon newsletter__icon--up" href="#"></a>
+                    <a class="newsletter__icon newsletter__icon--inst" href="#">
+                        <span class="sr-only">link to open Instagram</span>
+                    </a>
+                    <a class="newsletter__icon newsletter__icon--up" href="#">
+                        <span class="sr-only">link to open Upwork</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -491,7 +515,9 @@
             <li class="faq__tabs-item">
                 <div class="faq__tabs-box">
                     <div class="faq__tabs-head">
-                        <button class="faq__tabs-btn tab-btn" type="button" data-tab="#tab_1"></button>
+                        <button class="faq__tabs-btn tab-btn" type="button" data-tab="#tab_1">
+                            <span class="sr-only">a button that opens the answer to the question</span>
+                        </button>
                         <p class="faq__tabs-question">
                             How do you estimate the price for your services?
                         </p>
@@ -525,7 +551,9 @@
             <li class="faq__tabs-item">
                 <div class="faq__tabs-box">
                     <div class="faq__tabs-head">
-                        <button class="faq__tabs-btn tab-btn" type="button" data-tab="#tab_2"></button>
+                        <button class="faq__tabs-btn tab-btn" type="button" data-tab="#tab_2">
+                            <span class="sr-only">a button that opens the answer to the question</span>
+                        </button>
                         <p class="faq__tabs-question">
                             Why do you only work with Shopify?
                         </p>
@@ -578,7 +606,9 @@
             <li class="faq__tabs-item">
                 <div class="faq__tabs-box">
                     <div class="faq__tabs-head">
-                        <button class="faq__tabs-btn tab-btn" type="button" data-tab="#tab_3"></button>
+                        <button class="faq__tabs-btn tab-btn" type="button" data-tab="#tab_3">
+                            <span class="sr-only">a button that opens the answer to the question</span>
+                        </button>
                         <p class="faq__tabs-question">
                             Can I run the store on Shopify by <span>myself once development is complete?</span>
                         </p>
@@ -596,7 +626,9 @@
             <li class="faq__tabs-item">
                 <div class="faq__tabs-box">
                     <div class="faq__tabs-head">
-                        <button class="faq__tabs-btn tab-btn" type="button" data-tab="#tab_4"></button>
+                        <button class="faq__tabs-btn tab-btn" type="button" data-tab="#tab_4">
+                            <span class="sr-only">a button that opens the answer to the question</span>
+                        </button>
                         <p class="faq__tabs-question">
                             What services do you offer?
                         </p>
@@ -653,8 +685,12 @@
         </div>
         <div class="popup-form__navigation">
             <div class="popup-form__social">
-                <a class="popup-form__social-icon social__icons social__icons--inst" href="#"></a>
-                <a class="popup-form__social-icon social__icons social__icons--up" href="#"></a>
+                <a class="popup-form__social-icon social__icons social__icons--inst" href="#">
+                    <span class="sr-only">link to open Instagram</span>
+                </a>
+                <a class="popup-form__social-icon social__icons social__icons--up" href="#">
+                    <span class="sr-only">link to open Upwork</span>
+                </a>
             </div>
             <div class="popup-form__contact">
                 <span class="popup-form__title">Contacts</span>
@@ -687,8 +723,12 @@
             <div class="footer-top__wrapper">
                 <div class="footer-top__box">
                     <div class="footer-top__social">
-                        <a class="footer-top__social-link social__icons social__icons--inst" href="#"></a>
-                        <a class="footer-top__social-link social__icons social__icons--up" href="#"></a>
+                        <a class="footer-top__social-link social__icons social__icons--inst" href="#">
+                            <span class="sr-only">link to open Instagram</span>
+                        </a>
+                        <a class="footer-top__social-link social__icons social__icons--up" href="#">
+                            <span class="sr-only">Upwork</span>
+                        </a>
                     </div>
                     <div class="footer-top__location">
                         <a class="footer-top__location-link"

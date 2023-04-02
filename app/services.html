@@ -26,7 +26,7 @@
                         </a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link scroll" href="#contact">
+                        <a class="header__menu-link" href="index.html#contact">
                             Contacts
                         </a>
                     </li>
@@ -41,7 +41,7 @@
                         </a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link scroll" href="#faq">
+                        <a class="header__menu-link" href="index.html#faq">
                             FAQ
                         </a>
                     </li>
@@ -52,22 +52,28 @@
                 Contact us
             </button>
 
+            <button class="header-mobile__open tab-btn" data-tab="#tab_13">
+                <span></span>
+                <span class="sr-only">Button open mobile menu</span>
+            </button>
         </div>
 
-        <div class="header-mobile">
+        <div class="header-mobile tab-item lock-body" id="tab_13">
             <div class="header-mobile__top">
                 <img class="header-mobile__logo" src="images/logo.svg" alt="Logo of company">
-                <button class="header-mobile__close"></button>
+                <button class="header-mobile__close close-tab-btn">
+                    
+                </button>
             </div>
             <nav class="header-mobile__navigation">
                 <ul class="header-mobile__list">
                     <li class="header-mobile__item">
-                        <a class="header-mobile__link" href="#">
+                        <a class="header-mobile__link " href="#">
                             Services
                         </a>
                     </li>
                     <li class="header-mobile__item">
-                        <a class="header-mobile__link" href="#">
+                        <a class="header-mobile__link close-tab-btn scroll" href="#contact">
                             Contacts
                         </a>
                     </li>
@@ -82,7 +88,7 @@
                         </a>
                     </li>
                     <li class="header-mobile__item">
-                        <a class="header-mobile__link" href="#">
+                        <a class="header-mobile__link close-tab-btn scroll" href="#faq">
                             FAQ
                         </a>
                     </li>
@@ -188,7 +194,7 @@
             </form>
         </div>
     </div>
-    <div class="services__fixed tab-item" id="tab_7">
+    <div class="services__fixed tab-item lock-body" id="tab_7">
         <div class="services__card">
             <div class="container">
                 <span class="services__card-name">Сustom store development</span>
@@ -562,8 +568,12 @@
         </div>
         <div class="popup-form__navigation">
             <div class="popup-form__social">
-                <a class="popup-form__social-icon social__icons social__icons--inst" href="#"></a>
-                <a class="popup-form__social-icon social__icons social__icons--up" href="#"></a>
+                <a class="popup-form__social-icon social__icons social__icons--inst" href="#">
+                    <span class="sr-only">link to open Instagram</span>
+                </a>
+                <a class="popup-form__social-icon social__icons social__icons--up" href="#">
+                    <span class="sr-only">link to open Upwork</span>
+                </a>
             </div>
             <div class="popup-form__contact">
                 <span class="popup-form__title">Contacts</span>
@@ -596,8 +606,12 @@
             <div class="footer-top__wrapper">
                 <div class="footer-top__box">
                     <div class="footer-top__social">
-                        <a class="footer-top__social-link social__icons social__icons--inst" href="#"></a>
-                        <a class="footer-top__social-link social__icons social__icons--up" href="#"></a>
+                        <a class="footer-top__social-link social__icons social__icons--inst" href="#">
+                            <span class="sr-only">link to open Instagram</span>
+                        </a>
+                        <a class="footer-top__social-link social__icons social__icons--up" href="#">
+                            <span class="sr-only">Upwork</span>
+                        </a>
                     </div>
                     <div class="footer-top__location">
                         <a class="footer-top__location-link"

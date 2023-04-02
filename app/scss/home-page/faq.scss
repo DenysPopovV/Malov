@@ -1,14 +1,16 @@
 .faq {
+    padding-top: 150px;
     padding-bottom: 150px;
 
     @include mxw($sm) {
+        padding-top: 100px;
         padding-bottom: 100px;
     }
 
     @include mxw($xs) {
+        padding-top: 50px;
         padding-bottom: 50px;
     }
-
     &__title {
         margin-bottom: 73px;
 

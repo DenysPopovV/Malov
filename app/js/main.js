@@ -26,6 +26,16 @@
 //   swiperSlides[currentSlide].classList.add('swiper-slide-active');
 // });
 
+const menuFixed = document.querySelector('.header__box');
+const heroPadding = document.querySelector('.hero');
+
+window.addEventListener('scroll', function () {
+  const scrollTop = document.documentElement.scrollTop;
+  menuFixed.classList.toggle('sticky', scrollTop >= 100);
+  menuFixed.classList.toggle('animation', scrollTop >= 200);
+  menuFixed.classList.toggle('opacity', scrollTop >= 350);
+  heroPadding.classList.toggle('menu-padding', scrollTop >= 350);
+});
 
 $(function () {
   const headerHeight = $('.header__box').outerHeight();
@@ -36,6 +46,14 @@ $(function () {
     const scrollAnchor = $(this).attr('href');
 
     let scrollPoint = $(scrollAnchor).offset().top - headerHeight;
+
+    if (scrollAnchor === '#contact') {
+      scrollPoint = scrollPoint - -100;
+    }
+
+    if (scrollAnchor === '#faq') {
+      scrollPoint = scrollPoint - -100;
+    }
 
     $('body,html').animate({
       scrollTop: scrollPoint
@@ -49,28 +67,35 @@ const tabBtn = document.querySelectorAll('.tab-btn');
 const tabsItems = document.querySelectorAll('.tab-item');
 const closeTabBtns = document.querySelectorAll('.close-tab-btn');
 
-tabBtn.forEach(onTabClick)
+tabBtn.forEach(onTabClick);
 
 function onTabClick(item) {
-  item.addEventListener("click", function () {
+  item.addEventListener('click', function () {
     let currentBtn = item;
-    let tabId = currentBtn.getAttribute("data-tab");
+    let tabId = currentBtn.getAttribute('data-tab');
     let currentTab = document.querySelector(tabId);
 
+    if (currentBtn.classList.contains('active')) {
+      currentBtn.classList.remove('active');
+      currentTab.classList.remove('active');
 
-    if (currentBtn.classList.contains("active")) {
-      currentBtn.classList.remove("active");
-      currentTab.classList.remove("active");
+      if (!currentTab.classList.contains('lock-body')) {
+        document.body.classList.remove('lock');
+      }
     } else {
       tabBtn.forEach(function (item) {
-        item.classList.remove("active");
+        item.classList.remove('active');
       });
       tabsItems.forEach(function (item) {
-        item.classList.remove("active");
+        item.classList.remove('active');
       });
 
-      currentBtn.classList.add("active");
-      currentTab.classList.add("active");
+      currentBtn.classList.add('active');
+      currentTab.classList.add('active');
+
+      if (currentTab.classList.contains('lock-body')) {
+        document.body.classList.add('lock');
+      }
     }
 
     closeTabBtns.forEach(function (btn) {
@@ -81,10 +106,14 @@ function onTabClick(item) {
         if (activeTabBtn !== null && activeTab !== null) {
           activeTabBtn.classList.remove('active');
           activeTab.classList.remove('active');
+
+          // remove 'lock' class from body if the tab does not have the 'active' class
+          if (!document.querySelector('.tab-item.lock-body.active')) {
+            document.body.classList.remove('lock');
+          }
         }
       });
     });
-
   });
 }
 
