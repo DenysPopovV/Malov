@@ -4,13 +4,14 @@
         margin-bottom: 80px;
     }
 
-    &__swiper{
+    &__swiper {
         margin-bottom: 150px;
     }
 
-    &__swiper-container{
-        display: flex;
-        justify-content: space-between;
+    &__swiper-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
     }
 
     &__slide {
@@ -29,4 +30,21 @@
             margin-bottom: 0;
         }
     }
+
+    &__arrow {
+        bottom: -100px;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        &--prev {
+            left: 45%;
+            transform: rotate(-180deg);
+        }
+
+        &--next {
+            left: 55%;
+        }
+    }
+
+
 }
