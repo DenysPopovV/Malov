@@ -26,7 +26,7 @@
                         </a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link scroll" href="#contact">
+                        <a class="header__menu-link" href="index.html#contact">
                             Contacts
                         </a>
                     </li>
@@ -36,12 +36,12 @@
                         </a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="blog.html">
+                        <a class="header__menu-link" href="#">
                             Blog
                         </a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link scroll" href="#faq">
+                        <a class="header__menu-link" href="index.html#faq">
                             FAQ
                         </a>
                     </li>
@@ -52,22 +52,28 @@
                 Contact us
             </button>
 
+            <button class="header-mobile__open tab-btn" data-tab="#tab_13">
+                <span></span>
+                <span class="sr-only">Button open mobile menu</span>
+            </button>
         </div>
 
-        <div class="header-mobile">
+        <div class="header-mobile tab-item lock-body" id="tab_13">
             <div class="header-mobile__top">
                 <img class="header-mobile__logo" src="images/logo.svg" alt="Logo of company">
-                <button class="header-mobile__close"></button>
+                <button class="header-mobile__close close-tab-btn">
+                    
+                </button>
             </div>
             <nav class="header-mobile__navigation">
                 <ul class="header-mobile__list">
                     <li class="header-mobile__item">
-                        <a class="header-mobile__link" href="#">
+                        <a class="header-mobile__link " href="#">
                             Services
                         </a>
                     </li>
                     <li class="header-mobile__item">
-                        <a class="header-mobile__link" href="#">
+                        <a class="header-mobile__link close-tab-btn scroll" href="#contact">
                             Contacts
                         </a>
                     </li>
@@ -82,7 +88,7 @@
                         </a>
                     </li>
                     <li class="header-mobile__item">
-                        <a class="header-mobile__link" href="#">
+                        <a class="header-mobile__link close-tab-btn scroll" href="#faq">
                             FAQ
                         </a>
                     </li>
@@ -100,7 +106,42 @@
 </header>
 
         <main class="main">
-            
+            <section class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__box" style="background-image: url('images/logo.svg');">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__button" href="index.html">Home</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <span class="breadcrumbs__button">Blog</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+            <section class="blog">
+    <div class="container">
+        <div class="blog__main-card">
+            <img src="" alt="photo of the main news">
+            <div class="blog__main-text">
+                <span class="blog__main-title">Category</span>
+                <div class="blog__main-info">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    </p>
+                    <p>
+                        Starting text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                        took a galley
+                        of type and scrambled...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
             
         </main>
@@ -115,8 +156,12 @@
             <div class="footer-top__wrapper">
                 <div class="footer-top__box">
                     <div class="footer-top__social">
-                        <a class="footer-top__social-link social__icons social__icons--inst" href="#"></a>
-                        <a class="footer-top__social-link social__icons social__icons--up" href="#"></a>
+                        <a class="footer-top__social-link social__icons social__icons--inst" href="#">
+                            <span class="sr-only">link to open Instagram</span>
+                        </a>
+                        <a class="footer-top__social-link social__icons social__icons--up" href="#">
+                            <span class="sr-only">Upwork</span>
+                        </a>
                     </div>
                     <div class="footer-top__location">
                         <a class="footer-top__location-link"
