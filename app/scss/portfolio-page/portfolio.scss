@@ -48,14 +48,11 @@
 
     &__list-item {
         position: relative;
-        display: flex;
-        justify-content: center;
-        padding-bottom: 80px;
+        padding: 0 50px 80px;
+        display: none;
+        //    
 
-        filter: drop-shadow(-126px 226px 104px rgba(0, 0, 0, 0.01)) drop-shadow(-71px 127px 88px rgba(0, 0, 0, 0.05)) drop-shadow(-32px 57px 65px rgba(0, 0, 0, 0.09)) drop-shadow(-8px 14px 36px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
-
-        &:nth-child(2), 
-        &:nth-child(5) {
+        &:nth-child(3n-1) {
             transform: translateY(80px);
 
             @include mxw($sm) {
@@ -63,8 +60,7 @@
             }
         }
 
-        &:nth-child(3),
-        &:nth-child(6) {
+        &:nth-child(3n-0){
             transform: translateY(160px);
 
             @include mxw($sm) {
@@ -122,6 +118,7 @@
         font-weight: 900;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 3px $text;
+
         @include mxw($md) {
             font-size: 90px;
             right: -10px;
@@ -141,7 +138,8 @@
 
     &__list-button {
         bottom: 0;
-        transform: rotate(90deg);
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
     }
 
     &__button-box {
@@ -189,4 +187,10 @@
             background-color: $border;
         }
     }
+}
+
+.noContent {
+    color: #000;
+    background-color: transparent;
+    pointer-events: none;
 }
