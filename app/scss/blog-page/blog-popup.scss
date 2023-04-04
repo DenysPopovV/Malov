@@ -1,0 +1,102 @@
+.blog-info {
+    &__popups {
+        position: absolute;
+
+        background-color: $white;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        min-height: 80vh;
+        width: 100%;
+    }
+
+    &__popup-fixed {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        background: rgba(58, 58, 58, 0.7);
+        z-index: 10000;
+
+        &.active {
+            display: block;
+            max-height: 100%;
+        }
+    }
+
+    &__popups-images {
+        width: 100%;
+        min-height: 386px;
+        object-fit: cover;
+        margin-bottom: 30px;
+
+        @include mxw($sm) {
+            min-height: 250px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__popups-item {
+        max-height: 526px;
+        overflow-y: auto;
+        padding: 30px 10px;
+    }
+
+    &__popups-close {
+        z-index: 1000;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 33px;
+        height: 33px;
+        background-color: #161616;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 1px;
+            background-color: $white;
+        }
+
+        &::after {
+            transform: rotate(45deg);
+        }
+
+        &::before {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__popups-title {
+        margin-bottom: 53px;
+
+        p {
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @include mxw($sm) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__popups-text {
+        p {
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

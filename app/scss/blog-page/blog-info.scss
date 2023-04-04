@@ -1,9 +1,51 @@
-.blog {
+.blog-info {
+    padding-bottom: 210px;
+
+    @include mxw($sm) {
+        padding-bottom: 60px;
+    }
+
+    &__swiper {
+        margin-bottom: 40px;
+        width: 100%;
+        overflow: hidden;
+
+        @include mxw($sm) {
+            margin-bottom: 20px;
+        }
+    }
+
     &__main-card {
         width: 100%;
         display: flex;
-        margin-bottom: 40px;
         align-items: center;
+        margin-bottom: 40px;
+
+        @include mxw($lg) {
+            align-items: flex-end;
+        }
+
+        @include mxw($sm) {
+            align-items: center;
+            flex-direction: column;
+        }
+
+        &:hover {
+            .blog-info__main-hover {
+
+                &::after,
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__main-hover {
+        max-width: 650px;
+        margin-right: 40px;
+        position: relative;
+        cursor: pointer;
     }
 
     &__main-img {
@@ -11,7 +53,22 @@
         height: 479px;
         border-radius: 30px;
         object-fit: cover;
-        margin-right: 40px;
+        position: relative;
+
+        @include mxw($lg) {
+            width: 413px;
+            height: 304px;
+        }
+
+        @include mxw($sm) {
+            margin-bottom: 10px;
+        }
+
+        @include mxw($xs) {
+            width: 311px;
+            height: 249px;
+            margin-right: 0;
+        }
     }
 
     &__main-title {
@@ -20,28 +77,82 @@
         line-height: 27px;
         color: $accent;
         margin-bottom: 16px;
-    }
 
-    &__main-info {
-        p {
-            margin-bottom: 50px;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
+        @include mxw($xs) {
+            margin-bottom: 6px;
+            font-size: 11px;
+            line-height: 13px;
         }
     }
 
-    &__swiper-wrapper{
-       display: grid;
-       grid-template-columns: repeat(3, 1fr);
-       gap:35px;
-        margin-bottom: 220px;
+    &__main-info {
+        max-width: 730px;
+
+        p {
+            margin-bottom: 50px;
+
+            @include mxw($md) {
+                margin-bottom: 15px;
+                font-size: 20px;
+                line-height: 25px;
+            }
+
+            @include mxw($xs) {
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            &:last-child {
+                font-size: 22px;
+                line-height: 27px;
+                margin-bottom: 0;
+
+                @include mxw($md) {
+                    font-size: 18px;
+                    line-height: 23px;
+                }
+
+                @include mxw($xs) {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+            }
+        }
     }
 
     &__swiper-slide {
         max-width: 450px;
         width: 100%;
+
+        @include mxw($lg) {
+            max-width: 340px;
+        }
+
+        @include mxw($sm) {
+            max-width: 260px;
+        }
+
+        @include mxw($xs) {
+            max-width: 204px;
+        }
+    }
+
+    &__swiper-popup {
+        text-align: left;
+
+        &:hover {
+            .blog-info__swiper-hover {
+                &::after,
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__swiper-hover {
+        position: relative;
+        max-width: 450px;
     }
 
     &__swiper-img {
@@ -50,14 +161,72 @@
         border-radius: 30px;
         object-fit: cover;
         margin-bottom: 16px;
+
+        @include mxw($lg) {
+            width: 338px;
+            height: 312px;
+        }
+
+        @include mxw($sm) {
+            width: 260px;
+            height: 250px;
+        }
+
+        @include mxw($xs) {
+            width: 204px;
+            height: 192px;
+        }
     }
 
-    &__swiper-info{
-        p{
+    &__swiper-info {
+        p {
             margin-bottom: 25px;
-            &:last-child{
+
+            @include mxw($md) {
+                font-size: 20px;
+                line-height: 25px;
+            }
+
+            @include mxw($xs) {
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            &:last-child {
+                font-size: 22px;
+                line-height: 27px;
                 margin-bottom: 0;
+
+                @include mxw($md) {
+                    font-size: 18px;
+                    line-height: 23px;
+                }
+
+                @include mxw($xs) {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
             }
         }
     }
+
+    &__swiper-arrow {
+        max-width: 150px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .blog-info__arrow-prev {
+        transform: rotate(180deg);
+    }
+
+    .blog-info__arrow-next {
+        right: 0;
+    }
+
+    .swiper-button-disabled {
+        box-shadow: 0 0 0 0 transparent;
+    }
+
 }
