@@ -288,4 +288,14 @@ form.addEventListener('submit', (e) => {
 });
 
 
+$(document).ready(function(){
+  $(".portfolio__list-item").slice(0, 6).show();
+  $("#loadMore").on("click", function(e){
+    e.preventDefault();
+    $(".portfolio__list-item:hidden").slice(0, 3).slideDown();
+    if($(".portfolio__list-item:hidden").length == 0) {
+      $("#loadMore").text("No Content").addClass("noContent");
+    }
+  });
+})
 
