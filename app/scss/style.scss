@@ -6,8 +6,12 @@
 @import 'global';
 
 
-
 @import './components/header.scss';
+@import './components/footer.scss';
+@import './components/popup-form.scss';
+@import './components/form-help.scss';
+
+
 @import './home-page/hero.scss';
 @import './home-page/about.scss';
 @import './home-page/services.scss';
@@ -16,11 +20,6 @@
 @import './home-page/reviews.scss';
 @import './home-page/newsletter.scss';
 @import './home-page/faq.scss';
-@import './components/footer.scss';
-@import './components/popup-form.scss';
-
-
-
 
 
 @import './services-page/breadcrumbs.scss';
@@ -31,4 +30,4 @@
 @import './blog-page/blog-inst.scss';
 
 @import './portfolio-page/portfolio.scss';
-@import './components/form-help.scss';
+@import './portfolio-work-page/portfolio-work.scss';

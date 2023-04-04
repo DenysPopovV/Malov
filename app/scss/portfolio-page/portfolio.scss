@@ -50,7 +50,6 @@
         position: relative;
         padding: 0 50px 80px;
         display: none;
-        //    
 
         &:nth-child(3n-1) {
             transform: translateY(80px);
@@ -60,7 +59,7 @@
             }
         }
 
-        &:nth-child(3n-0){
+        &:nth-child(3n-0) {
             transform: translateY(160px);
 
             @include mxw($sm) {
@@ -94,6 +93,11 @@
         width: 290px;
         height: 566px;
         border-radius: 30px;
+        box-shadow: -92px 215px 94px rgba(0, 0, 0, 0.01),
+            -52px 121px 79px rgba(0, 0, 0, 0.05),
+            -23px 54px 59px rgba(0, 0, 0, 0.09),
+            -6px 13px 32px rgba(0, 0, 0, 0.1),
+            0px 0px 0px rgba(0, 0, 0, 0.1);
         object-fit: cover;
         cursor: pointer;
 
