@@ -50,8 +50,6 @@
         display: flex;
         justify-content: center;
 
-        filter: drop-shadow(-126px 226px 104px rgba(0, 0, 0, 0.01)) drop-shadow(-71px 127px 88px rgba(0, 0, 0, 0.05)) drop-shadow(-32px 57px 65px rgba(0, 0, 0, 0.09)) drop-shadow(-8px 14px 36px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
-
         &:nth-child(2) {
             transform: translateY(80px);
 
@@ -94,6 +92,11 @@
         width: 290px;
         height: 566px;
         border-radius: 30px;
+        box-shadow: -92px 215px 94px rgba(0, 0, 0, 0.01),
+            -52px 121px 79px rgba(0, 0, 0, 0.05),
+            -23px 54px 59px rgba(0, 0, 0, 0.09),
+            -6px 13px 32px rgba(0, 0, 0, 0.1),
+            0px 0px 0px rgba(0, 0, 0, 0.1);
         object-fit: cover;
         cursor: pointer;
 
