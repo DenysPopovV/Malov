@@ -295,6 +295,7 @@
     }
 
     &__submit {
+        color: $text;
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
@@ -405,6 +406,7 @@
     }
 
     &__location-link {
+        display: block;
         font-weight: 400;
         font-size: 20px;
         line-height: 24px;

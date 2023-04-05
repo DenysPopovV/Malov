@@ -164,6 +164,7 @@
     }
 
     &__btn {
+        color: $text;
         box-shadow: inset 0px 0px 20px 2px rgba(92, 177, 255, 1);
         cursor: pointer;
         border-radius: 50%;
@@ -249,12 +250,6 @@
 
     }
 
-    // &__form-box {
-    //     &:first-child {
-    //         transform: translateX(100px);
-    //     }
-    // }
-
     &__form-name {
         width: 100%;
         display: block;
@@ -334,6 +329,12 @@
             padding: 0 0 3px 5px;
             font-size: 10px;
             line-height: 12px;
+        }
+
+        &:focus {
+            @include mxw($sm) {
+                font-size: 17px;
+            }
         }
     }
 
@@ -425,6 +426,7 @@
     }
 
     &__submit {
+        color: $text;
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
@@ -460,7 +462,6 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        margin-right: -50%;
         color: #E3E3E3;
         width: 100%;
         background-color: $footer-bg;
@@ -508,6 +509,8 @@
     }
 
     &__card-name {
+        @include line-clamp(1);
+        word-break: break-all;
         position: relative;
         display: block;
         font-weight: 600;
@@ -535,6 +538,11 @@
 
         @include mxw($vlg) {
             flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        @include mxw($sm) {
+            margin-bottom: 0;
         }
     }
 
@@ -568,6 +576,10 @@
 
         @include mxw($vlg) {
             margin-bottom: 20px;
+        }
+
+        @include mxw($sm) {
+            margin-bottom: 0;
         }
     }
 
@@ -609,6 +621,10 @@
         @include mxw($vlg) {
             margin-bottom: 50px;
         }
+
+        @include mxw($sm) {
+            margin-bottom: 15px;
+        }
     }
 
     &__card-item {
@@ -634,17 +650,24 @@
     }
 
     &__card-conect {
+        font-size: 14px;
+        line-height: 20px;
         margin-right: 70px;
-        padding: 17px 40px;
+        padding: 13px 40px 17px;
         color: $white;
 
         &::after,
         &::before {
             filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(212deg) brightness(111%) contrast(101%);
         }
+
         @include mxw($vlg) {
             margin-right: 0;
             margin-bottom: 15px;
+        }
+
+        @include mxw($sm) {
+            margin-bottom: 0;
         }
     }
 }

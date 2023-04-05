@@ -246,6 +246,8 @@ function onTabClick(item) {
   });
 }
 
+
+
 let openTab = document.querySelector('.careers-tabs__item:nth-child(2)>.careers-tabs__btn');
 if (openTab !== null) {
   openTab.click();
@@ -302,6 +304,5 @@ $(document).ready(function(){
     }
   });
 })
-
 
 

@@ -6,8 +6,8 @@
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
-        min-height: 80vh;
         width: 100%;
+        padding-bottom: 20px;
     }
 
     &__popup-fixed {
@@ -29,7 +29,7 @@
         width: 100%;
         min-height: 386px;
         object-fit: cover;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
 
         @include mxw($sm) {
             min-height: 250px;
@@ -38,9 +38,9 @@
     }
 
     &__popups-item {
-        max-height: 526px;
+        max-height: 275px;
         overflow-y: auto;
-        padding: 30px 10px;
+        // padding: 30px 10px;
     }
 
     &__popups-close {
