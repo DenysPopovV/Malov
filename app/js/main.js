@@ -246,6 +246,8 @@ function onTabClick(item) {
   });
 }
 
+document.querySelector('.careers-tabs__item:nth-child(2)>.careers-tabs__btn').click(); 
+
 
 let form = document.getElementById('form');
 let client = document.getElementById('client');
