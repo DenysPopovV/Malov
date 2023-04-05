@@ -6,9 +6,9 @@
         opacity: 0;
         position: fixed;
         padding: 10px;
-        top: 5px;
-        left: 5px;
-        right: 5px;
+        top: 10px;
+        left: 20px;
+        right: 20px;
         background-color: $white;
         margin: 0 auto;
         max-width: 1440px;
@@ -28,20 +28,24 @@
         opacity: 1;
     }
 
-    &__box {
+    &__test {
         top: 0;
         right: 0;
         left: 0;
         position: absolute;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         padding: 30px 20px;
 
         @include mxw($xs) {
             padding: 10px;
         }
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 20px;
     }
 
     &__logo {
@@ -93,7 +97,7 @@
 }
 
 .header-mobile {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: fixed;
     display: flex;
@@ -249,7 +253,10 @@
         color: $white;
         width: 172px;
         height: 54px;
-        padding: 20px 38px;
+        padding: 13px 40px 17px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 30px;
 
         &::after,
         &::before {

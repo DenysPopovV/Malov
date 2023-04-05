@@ -177,7 +177,7 @@ $(function () {
     let scrollPoint = $(scrollAnchor).offset().top - headerHeight;
 
     if (scrollAnchor === '#contact') {
-      scrollPoint = scrollPoint - -100;
+      scrollPoint = scrollPoint - 50;
     }
 
     if (scrollAnchor === '#faq') {

@@ -15,10 +15,10 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        transform: translateY(-50px);
-
+        margin-bottom: 40px;
+       
         @include mxw($xs) {
-            transform: translateY(0);
+            margin-bottom: 10px;
             padding-left: 5px;
             justify-content: space-between;
         }
@@ -152,10 +152,7 @@
     }
 
     &__contact {
-        transform: translateY(-50px);
-
-        @include mxw($xs) {
-            transform: translateY(0);
+        @include mxw($md) {
             min-height: 170px;
         }
     }

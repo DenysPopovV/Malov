@@ -6,7 +6,7 @@
     }
 
     @include mxw($xs) {
-        padding-bottom: 80px;
+        padding-bottom: 50px;
     }
 
     &__title {
@@ -43,6 +43,7 @@
         @include mxw($xs) {
             grid-template-columns: repeat(2, 1fr);
             margin-bottom: 0;
+            padding-bottom: 30px;
             max-width: 360px;
         }
     }
@@ -200,6 +201,10 @@
         &:hover::after {
             top: -45%;
             background-color: $border;
+        }
+
+        @include mxw($sm) {
+            padding: 9px 24px;
         }
     }
 }
