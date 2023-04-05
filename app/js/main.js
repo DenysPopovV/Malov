@@ -177,7 +177,7 @@ $(function () {
     let scrollPoint = $(scrollAnchor).offset().top - headerHeight;
 
     if (scrollAnchor === '#contact') {
-      scrollPoint = scrollPoint - -100;
+      scrollPoint = scrollPoint - 50;
     }
 
     if (scrollAnchor === '#faq') {
@@ -246,8 +246,10 @@ function onTabClick(item) {
   });
 }
 
-document.querySelector('.careers-tabs__item:nth-child(2)>.careers-tabs__btn').click(); 
-
+let openTab = document.querySelector('.careers-tabs__item:nth-child(2)>.careers-tabs__btn');
+if (openTab !== null) {
+  openTab.click();
+}
 
 let form = document.getElementById('form');
 let client = document.getElementById('client');
@@ -300,4 +302,6 @@ $(document).ready(function(){
     }
   });
 })
+
+
 

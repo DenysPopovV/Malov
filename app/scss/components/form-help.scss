@@ -1,13 +1,21 @@
 .form-help {
     padding-bottom: 150px;
 
+    @include mxw($md) {
+        padding-bottom: 100px;
+    }
+
+    @include mxw($sm) {
+        padding-bottom: 50px;
+    }
+
     &__title {
         transform: translateX(20px);
         margin-bottom: 56px;
 
         @include mxw($sm) {
             transform: translateX(0);
-         }
+        }
     }
 
     &__form {
@@ -15,7 +23,7 @@
         transform: translateX(20px);
 
         @include mxw($sm) {
-           transform: translateX(0);
+            transform: translateX(0);
         }
     }
 
@@ -23,28 +31,43 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 60px;
+
+        @include mxw($xs) {
+            margin-bottom: 30px;
+        }
     }
 
     &__form-name {
         margin-bottom: 44px;
+
+        @include mxw($xs) {
+            margin-bottom: 30px;
+        }
+
         &:nth-child(1) {
             max-width: 524px;
+
             @include mxw($md) {
                 margin-right: 180px;
             }
         }
+
         &:nth-child(2) {
             max-width: 700px;
+
             @include mxw($md) {
                 margin-right: 160px;
             }
         }
+
         &:nth-child(3) {
             max-width: 895px;
+
             @include mxw($md) {
                 margin-right: 100px;
             }
         }
+
         &:nth-child(4) {
             max-width: 1174px;
             margin-bottom: 0;
@@ -71,6 +94,11 @@
         font-size: 16px;
         line-height: 20px;
         width: 100%;
+
+        @include mxw($xs) {
+            font-size: 10px;
+            line-height: 12px;
+        }
     }
 
     &__privacy {
