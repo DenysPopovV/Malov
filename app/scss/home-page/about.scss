@@ -19,6 +19,7 @@
     }
 
     &__button {
+        color: $text;
         margin-bottom: 20px;
 
         &.active::after {
