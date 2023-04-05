@@ -7,6 +7,12 @@
         font-size: 64px;
         line-height: 78px;
         margin-bottom: 30px;
+
+        @include mxw($md) {
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 20px;
+        }
     }
 
     &__text {
@@ -21,12 +27,38 @@
                 margin-bottom: 0;
             }
         }
+
+        @include mxw($vlg) {
+            max-width: 100%;
+        }
+
+        @include mxw($xs) {
+            margin-bottom: 44px;
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
     }
 
     &__top-content {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 220px;
+        min-height: 679px;
+
+        @include mxw($vlg) {
+            margin-bottom: 60px;
+        }
+
+        @include mxw($md) {
+            min-height: 625px;
+            position: relative;
+        }
+
+        @include mxw($xs) {
+            min-height: 355px;
+            margin-bottom: 60px;
+        }
     }
 
     &__top-img {
@@ -45,16 +77,31 @@
             left: -70px;
         }
 
-        @include mxw($lg) {
+        @include mxw($vlg) {
+
             &::after {
                 width: 510px;
                 height: 672px;
+                top: -60px;
+            }
+        }
+
+        @include mxw($md) {
+            position: absolute;
+            top: 105px;
+        }
+
+        @include mxw($xs) {
+            top: 150px;
+
+            &::after {
+                width: 335px;
+                height: 335px;
             }
         }
     }
 
     &__top-picture {
-        display: block;
         width: 250px;
         height: 530px;
         border-radius: 35px;
@@ -66,49 +113,68 @@
         left: 227px;
         z-index: 1;
 
-        @include mxw($lg) {
+        @include mxw($vlg) {
             width: 185px;
             height: 395px;
-            top: 94px;
+            top: 34px;
             left: 148px;
             border-radius: 30px;
+        }
+
+        @include mxw($xs) {
+            width: 116px;
+            height: 252px;
+            top: -47px;
+            left: 75px;
+            border-radius: 15px;
         }
     }
 
     &__top-box {
+        position: relative;
         max-width: 785px;
         width: 100%;
+
+        @include mxw($md) {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
     }
 
     &__top-text {
         text-align: right;
-
-        p {
-            span {
-                display: block;
-            }
-        }
-
-        @include mxw($lg) {
-
-            p{
-                span{
-                    display: inline-block;
-                }
-            }
-
-        }
-
         margin-bottom: 120px;
+
+        @include mxw($vlg) {
+            margin-bottom: 60px;
+        }
+
+        @include mxw($md) {
+            margin-bottom: 20px;
+        }
     }
 
     &__top-info {
+        width: 784px;
         height: 230px;
         position: relative;
         background-image: url('../images/sprite.svg#work-deco');
         background-repeat: no-repeat;
         background-position: 165px -100px;
         background-size: 500px 450px;
+
+        @include mxw($lg) {
+            position: absolute;
+            transform: translateX(-260px) translateY(170px) rotate(-30deg);
+            top: 80px;
+            right: -300px;
+        }
+
+        @include mxw($md) {
+            display: none;
+        }
     }
 
     &__top-item {
@@ -129,7 +195,7 @@
 
         &:nth-child(3) {
             bottom: 66px;
-            right: 110px;
+            left: 440px;
         }
 
         &:nth-child(4) {
@@ -139,7 +205,7 @@
 
         &:nth-child(5) {
             top: 53px;
-            right: 0;
+            left: 600px;
         }
 
         &:nth-child(6) {
@@ -153,7 +219,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 480px;
+        min-height: 480px;
+
+        @include mxw($vlg) {
+            flex-direction: column;
+            margin-bottom: 60px;
+        }
+
+        @include mxw($xs) {
+            margin-bottom: 40px;
+            min-height: 420px;
+        }
     }
 
     &__middle-text {
@@ -166,26 +242,80 @@
                 margin-bottom: 0;
             }
         }
+
+        @include mxw($vlg) {
+            margin-bottom: 60px;
+            max-width: 100%;
+        }
+
+        @include mxw($xs) {
+            margin-bottom: 25px;
+
+            p {
+                margin-bottom: 15px;
+            }
+        }
     }
 
     &__middle-img {
-        width: 750px;
-        height: 435px;
-        position: absolute;
-        right: -100px;
-        background-image: url('../images/sprite.svg#note');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        position: relative;
+        width: 600px;
+        height: 432px;
+
+        &::after {
+            content: '';
+            width: 750px;
+            height: 435px;
+            position: absolute;
+            top: 0;
+            right: -100px;
+            background-image: url('../images/sprite.svg#note');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        @include mxw($vlg) {
+            &::after {
+                right: -65px;
+            }
+        }
+
+        @include mxw($sm) {
+            width: 315px;
+            height: 200px;
+
+            &::after {
+                width: 315px;
+                height: 215px;
+                right: 0;
+            }
+        }
+
     }
 
     &__middle-picture {
-        transform: translate(78px, 18px);
+        position: absolute;
+        top: 18px;
+        left: 31px;
         border-radius: 10px;
-        width: 604.85px;
-        height: 375.3px;
+        width: 600px;
+        height: 375px;
         object-fit: cover;
         background-color: #aaa;
+        z-index: 1;
+
+        @include mxw($vlg) {
+            left: -4px;
+        }
+
+        @include mxw($sm) {
+            top: 22px;
+            left: 35px;
+            width: 250px;
+            height: 160px;
+            border-radius: 5px;
+        }
     }
 
     &__bottom-content {
@@ -193,8 +323,11 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 630px;
         margin-bottom: 40px;
+
+        @include mxw($vlg) {
+            justify-content: flex-start;
+        }
     }
 
     &__bottom-img {
@@ -205,6 +338,9 @@
         background-position: center;
         background-size: cover;
 
+        @include mxw($vlg) {
+            display: none;
+        }
     }
 
     &__bottom-picture {
@@ -220,8 +356,7 @@
     }
 
     &__bottom-text {
-        max-width: 685px;
-
+        max-width: 670px;
 
         p {
             margin-bottom: 40px;
@@ -231,13 +366,34 @@
                 margin-bottom: 0;
             }
         }
+
+        @include mxw($vlg) {
+            max-width: 100%;
+
+            p {
+                transform: translateX(0);
+            }
+        }
+
+        @include mxw($md) {
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
     }
 
     &__bottom-item {
         color: #6D6D6D;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 15px;
         line-height: 20px;
+
+        @include mxw($xs) {
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+        }
     }
 
     &__content-img {
@@ -245,6 +401,14 @@
         width: 100%;
         height: 652px;
         margin-bottom: 135px;
+
+        @include mxw($vlg) {
+            height: 350px;
+        }
+
+        @include mxw($md) {
+            height: 360px;
+        }
     }
 
     &__content-picture {
@@ -253,6 +417,18 @@
         object-fit: cover;
         position: absolute;
         left: -200px;
+
+        @include mxw($vlg) {
+            width: 690.58px;
+            height: 377px;
+            left: -85px;
+        }
+
+        @include mxw($md) {
+            width: 465px;
+            height: 253.85px;
+            left: 0;
+        }
     }
 
     &__content-decoration {
@@ -271,6 +447,27 @@
             top: 15px;
             right: -150px;
         }
+
+        @include mxw($vlg) {
+            transform: rotate(0);
+
+            &::after {
+                width: 490.98px;
+                height: 646.88px;
+                top: -115px;
+                right: -191px;
+            }
+        }
+
+        @include mxw($md) {
+            transform: rotate(-17deg);
+            &::after {
+                width: 250px;
+                height: 320px;
+                top: 215px;
+                right: 100px;
+            }
+        }
     }
 
     &__content-photo {
@@ -283,5 +480,21 @@
         border-radius: 35px;
         object-fit: cover;
         z-index: 1;
+
+        @include mxw($vlg) {
+            width: 213px;
+            height: 453px;
+            right: 30px;
+            top: -105px;
+            border-radius: 30px;
+        }
+
+        @include mxw($md) {
+            width: 107px;
+            height: 227px;
+            right: 213px;
+            top: 218px;
+            border-radius: 12px;
+        }
     }
 }
