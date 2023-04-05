@@ -30,13 +30,14 @@
         grid-row-gap: 75px;
 
         @include mxw($lg) {
-            max-width: 930px;
-            grid-column-gap: 35px;
+            max-width: 100%;
+            grid-column-gap: 20px;
         }
 
         @include mxw($sm) {
             grid-template-columns: repeat(2, 1fr);
             margin-bottom: 50px;
+            grid-row-gap: 35px;
         }
 
         @include mxw($xs) {
@@ -48,23 +49,23 @@
 
     &__list-item {
         position: relative;
-        padding: 0 50px 80px;
+        padding-bottom: 80px;
         display: none;
 
         &:nth-child(3n-1) {
             transform: translateY(80px);
-
-            @include mxw($sm) {
-                transform: translateY(120px);
-            }
         }
 
         &:nth-child(3n-0) {
             transform: translateY(160px);
+        }
 
-            @include mxw($sm) {
-                transform: translateY(70px);
-            }
+        @include mxw($sm) {
+            padding-bottom: 40px;
+            &:nth-child(3n-1),
+            &:nth-child(3n-0) {
+                transform: translateY(0);
+            }            
         }
     }
 
@@ -98,14 +99,23 @@
             -23px 54px 59px rgba(0, 0, 0, 0.09),
             -6px 13px 32px rgba(0, 0, 0, 0.1),
             0px 0px 0px rgba(0, 0, 0, 0.1);
-        object-fit: cover;
+        object-fit: contain;
         cursor: pointer;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
 
         @include mxw($lg) {
             width: 218px;
             height: 426px;
         }
 
+        @include mxw($md) {
+            height: 426px;
+        }
+        @include mxw($sm) {
+            object-fit: cover;
+        }
         @include mxw($xs) {
             width: 116px;
             height: 227px;
@@ -131,6 +141,7 @@
         @include mxw($sm) {
             font-size: 70px;
             right: 0px;
+            bottom: 0;
         }
 
         @include mxw($xs) {

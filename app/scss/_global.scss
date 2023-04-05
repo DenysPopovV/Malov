@@ -52,6 +52,7 @@ html {
     max-width: 1450px;
     padding: 0 15px;
     margin: 0 auto;
+    position: relative;
 }
 
 input {
@@ -129,6 +130,8 @@ input {
         0px 0px 47.88px #5CB1FF,
         0px 0px 13.68px #5CB1FF,
         0px 0px 6.84px #5CB1FF;
+    transition: box-shadow .6s linear;
+    
 
     &::after {
         content: '';
@@ -295,6 +298,50 @@ input {
                 0px 0px 20.5833px $white,
                 0px 0px 5.88094px $white,
                 0px 0px 2.94047px $white;
+        }
+    }
+}
+
+.blog-hover-popup {
+    &::after {
+        content: '';
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6),
+                rgba(0, 0, 0, 0.6));
+        border-radius: 30px;
+        transition: opacity .5s linear;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(7.5px);
+        border-radius: 50%;
+        width: 68px;
+        height: 68px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        z-index: 1;
+        background-image: url('../images/icons/blog-arrow-hover.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transition: opacity .5s linear;
+    }
+
+    &:hover {
+
+        &::after,
+        &::before {
+            opacity: 1;
         }
     }
 }

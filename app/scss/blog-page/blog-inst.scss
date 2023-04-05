@@ -1,22 +1,43 @@
 .blog-inst {
+    padding-bottom: 110px;
+
+    @include mxw($sm) {
+        padding-bottom: 60px;
+    }
 
     &__title {
         margin-bottom: 80px;
+
+        @include mxw($sm) {
+         margin-bottom: 30px;
+        }
     }
 
     &__swiper {
-        margin-bottom: 150px;
-    }
+        margin-bottom: 40px;
+        overflow: hidden;
 
-    &__swiper-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
+        @include mxw($sm) {
+            margin-bottom: 20px;
+           }
     }
 
     &__slide {
         max-width: 450px;
         width: 100%;
+        cursor: pointer;
+
+        @include mxw($lg) {
+            max-width: 340px;
+        }
+
+        @include mxw($sm) {
+            max-width: 260px;
+        }
+
+        @include mxw($xs) {
+            max-width: 204px;
+        }
     }
 
     &__img {
@@ -29,22 +50,41 @@
         &:last-child {
             margin-bottom: 0;
         }
+
+        @include mxw($lg) {
+            width: 338px;
+            height: 312px;
+        }
+
+        @include mxw($sm) {
+            width: 260px;
+            height: 250px;
+        }
+
+        @include mxw($xs) {
+            width: 204px;
+            height: 192px;
+        }
     }
 
-    &__arrow {
-        bottom: -100px;
+
+    &__arrows {
+        max-width: 150px;
+        position: relative;
         left: 50%;
-        transform: translate(-50%, 0);
-
-        &--prev {
-            left: 45%;
-            transform: rotate(-180deg);
-        }
-
-        &--next {
-            left: 55%;
-        }
+        transform: translateX(-50%);
     }
 
+    .swiper-button-prev {
+        transform: rotate(180deg);
+    }
+
+    .swiper-button-next {
+        right: 0;
+    }
+
+    .swiper-button-disabled {
+        box-shadow: 0 0 0 0 transparent;
+     }
 
 }

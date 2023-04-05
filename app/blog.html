@@ -41,8 +41,8 @@
                         </a>
                     </li>
                     <li class="header__menu-item">
-                        <a class="header__menu-link" href="index.html#faq">
-                            FAQ
+                        <a class="header__menu-link" href="careers.html">
+                            Careers
                         </a>
                     </li>
                 </ul>
@@ -88,7 +88,7 @@
                         </a>
                     </li>
                     <li class="header-mobile__item">
-                        <a class="header-mobile__link close-tab-btn scroll" href="#faq">
+                        <a class="header-mobile__link close-tab-btn" href="careers.html">
                             FAQ
                         </a>
                     </li>
@@ -125,13 +125,15 @@
     </div>
 </section>
 
-            <section class="blog">
+            <section class="blog-info">
     <div class="container">
-        <div class="blog__main-card">
-            <img class="blog__main-img" src="images/blog-news.jpg" alt="photo of the main news">
-            <div class="blog__main-text">
-                <span class="blog__main-title">Category</span>
-                <div class="blog__main-info">
+        <div class="blog-info__main-card">
+            <button class="blog-info__main-hover blog-hover-popup" type="button">
+                <img class="blog-info__main-img" src="images/blog-page/blog-info-main.jpg" alt="photo of the main news">
+            </button>
+            <div class="blog-info__main-text">
+                <span class="blog-info__main-title">Category</span>
+                <div class="blog-info__main-info">
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </p>
@@ -144,89 +146,185 @@
                 </div>
             </div>
         </div>
-        <div class="blog__swiper">
-            <div class="blog__swiper-wrapper">
-                <div class="blog__swiper-slide">
-                    <img class="blog__swiper-img" src="images/blog-news.jpg" alt="photo of the news">
-                    <span class="blog__main-title">Category</span>
-                    <div class="blog__swiper-info">
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        </p>
-                        <p>
-                            Starting text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem
-                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                            printer
-                            took a galley
-                            of type and scrambled...
-                        </p>
-                    </div>
+        <div class="blog-info__swiper swiper-info">
+            <div class="blog-info__swiper-wrapper swiper-wrapper">
+                <div class="blog-info__swiper-slide swiper-slide">
+                    <button class="blog-info__swiper-popup tab-btn" data-tab="#tab_1">
+                        <div class="blog-info__swiper-hover blog-hover-popup">
+                            <img class="blog-info__swiper-img" src="images/blog-page/blog-info-main.jpg"
+                                alt="photo of the news">
+                        </div>
+                        <span class="blog-info__main-title">Category</span>
+                        <div class="blog-info__swiper-info">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </div>
+                    </button>
                 </div>
-                <div class="blog__swiper-slide">
-                    <img class="blog__swiper-img" src="images/blog-news.jpg" alt="photo of the news">
-                    <span class="blog__main-title">Category</span>
-                    <div class="blog__swiper-info">
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        </p>
-                        <p>
-                            Starting text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem
-                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                            printer
-                            took a galley
-                            of type and scrambled...
-                        </p>
-                    </div>
+                <div class="blog-info__swiper-slide swiper-slide">
+                    <button class="blog-info__swiper-popup tab-btn" data-tab="#tab_2">
+                        <div class="blog-info__swiper-hover blog-hover-popup">
+                            <img class="blog-info__swiper-img" src="images/blog-page/blog-info-main.jpg"
+                                alt="photo of the news">
+                        </div>
+                        <span class="blog-info__main-title">Category</span>
+                        <div class="blog-info__swiper-info">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </div>
+                    </button>
                 </div>
-                <div class="blog__swiper-slide">
-                    <img class="blog__swiper-img" src="images/blog-news.jpg" alt="photo of the news">
-                    <span class="blog__main-title">Category</span>
-                    <div class="blog__swiper-info">
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        </p>
-                        <p>
-                            Starting text Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem
-                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                            printer
-                            took a galley
-                            of type and scrambled...
-                        </p>
-                    </div>
+                <div class="blog-info__swiper-slide swiper-slide">
+                    <button class="blog-info__swiper-popup">
+                        <div class="blog-info__swiper-hover blog-hover-popup">
+                            <img class="blog-info__swiper-img" src="images/blog-page/blog-info-main.jpg"
+                                alt="photo of the news">
+                        </div>
+                        <span class="blog-info__main-title">Category</span>
+                        <div class="blog-info__swiper-info">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </div>
+                    </button>
                 </div>
+                <div class="blog-info__swiper-slide swiper-slide">
+                    <button class="blog-info__swiper-popup">
+                        <div class="blog-info__swiper-hover blog-hover-popup">
+                            <img class="blog-info__swiper-img" src="images/blog-page/blog-info-main.jpg"
+                                alt="photo of the news">
+                        </div>
+                        <span class="blog-info__main-title">Category</span>
+                        <div class="blog-info__swiper-info">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </p>
+                        </div>
+                    </button>
+                </div>
+
             </div>
-            <div class="blog__swiper-arrow swiper-button-prev"></div>
-            <div class="blog__swiper-arrow swiper-button-next"></div>
         </div>
+        <div class="blog-info__swiper-arrow">
+            <div class="blog-info__arrow-prev accent-button-arrow"></div>
+            <div class="blog-info__arrow-next accent-button-arrow"></div>
+        </div>
+
     </div>
 </section>
 
-            <seection class="blog-inst">
+            <section class="blog-inst">
     <div class="container">
         <h3 class="blog-inst__title title">Instagram</h3>
-        <div class="blog-inst__swiper">
-            <div class="blog-inst__swiper-container">
-                <div class="blog-inst__slide">
-                    <img class="blog-inst__img" src="images/blog-news.jpg" alt="photo of the main news">
-                    <img class="blog-inst__img" src="images/blog-news.jpg" alt="photo of the main news">
-                </div>
-                <div class="blog-inst__slide">
-                    <img class="blog-inst__img" src="images/blog-news.jpg" alt="photo of the main news">
+        <div class="blog-inst__swiper swiper-inst">
+            <div class="blog-inst__swiper-container swiper-wrapper">
+                <div class="blog-inst__slide blog-hover-popup swiper-slide">
                     <img class="blog-inst__img" src="images/blog-news.jpg" alt="photo of the main news">
                 </div>
-                <div class="blog-inst__slide">
+                <div class="blog-inst__slide blog-hover-popup swiper-slide">
                     <img class="blog-inst__img" src="images/blog-news.jpg" alt="photo of the main news">
+                </div>
+                <div class="blog-inst__slide blog-hover-popup swiper-slide">
+                    <img class="blog-inst__img" src="images/blog-news.jpg" alt="photo of the main news">
+                </div>
+                <div class="blog-inst__slide blog-hover-popup swiper-slide">
                     <img class="blog-inst__img" src="images/blog-news.jpg" alt="photo of the main news">
                 </div>
             </div>
-            <div class="blog-inst__arrow blog-inst__arrow--prev swiper-button-prev accent-button-arrow"></div>
-            <div class="blog-inst__arrow blog-inst__arrow--next swiper-button-next accent-button-arrow"></div>
+        </div>
+
+        <div class="blog-inst__arrows">
+            <div class="blog-inst__arrow-prev swiper-button-prev accent-button-arrow"></div>
+            <div class="blog-inst__arrow-next swiper-button-next accent-button-arrow"></div>
+        </div>
+        
+    </div>
+</section>
+
+            <div class="blog-info__popup-fixed tab-item lock-body" id="tab_1">
+    <div class="blog-info__popups">
+        <div class="container">
+            <button class="blog-info__popups-close close-tab-btn" type="button"></button>
+        </div>
+        <img class="blog-info__popups-images" src="images/blog-page/popup-bg.jpg" alt="Blog Images">
+        <div class="container">
+            <div class="blog-info__popups-item">
+                <div class="blog-info__popups-title">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                </div>
+                <div class="blog-info__popups-text">
+                    <p>
+                        Starting text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum
+                        has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley
+                        of type and scrambled...
+                    </p>
+                    <p>
+                        Starting text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum
+                        has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley
+                        of type and scrambled...
+                    </p>
+                    <p>
+                        Starting text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum
+                        has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley
+                        of type and scrambled...
+                    </p>
+
+                    <p>
+                        Starting text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum
+                        has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley
+                        of type and scrambled...
+                    </p><p>
+                        Starting text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum
+                        has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley
+                        of type and scrambled...
+                    </p>
+                    
+
+                </div>
+            </div>
         </div>
     </div>
-</seection>
+</div>
+<div class="blog-info__popup-fixed tab-item lock-body" id="tab_2">
+    <div class="blog-info__popups">
+        <div class="container">
+            <button class="blog-info__popups-close close-tab-btn" type="button"></button>
+        </div>
+        <img class="blog-info__popups-images" src="images/blog-page/popup-bg.jpg" alt="Blog Images">
+        <div class="container">
+            <div class="blog-info__popups-item">
+                <div class="blog-info__popups-title">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                </div>
+                <div class="blog-info__popups-text">
+                    <p>
+                        Starting text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum
+                        has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley
+                        of type and scrambled...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
         </main>
 
     <footer class="footer">
