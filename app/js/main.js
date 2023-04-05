@@ -248,6 +248,10 @@ function onTabClick(item) {
 
 
 
+let openTab = document.querySelector('.careers-tabs__item:nth-child(2)>.careers-tabs__btn');
+if (openTab !== null) {
+  openTab.click();
+}
 
 let form = document.getElementById('form');
 let client = document.getElementById('client');
@@ -301,7 +305,4 @@ $(document).ready(function(){
   });
 })
 
-let openTab = document.querySelector('.careers-tabsitem:nth-child(2)>.careers-tabsbtn');
-if (openTab !== null) {
-  openTab.click();
-}
+
