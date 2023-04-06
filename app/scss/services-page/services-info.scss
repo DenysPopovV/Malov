@@ -391,15 +391,15 @@
         position: relative;
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
 
         @include mxw($vlg) {
-            transform: translateX(100px);
+            justify-content: flex-end;
         }
 
         @include mxw($md) {
-            transform: translateX(0);
+            justify-content: flex-start;
         }
+        
     }
 
     &__danger {
@@ -475,7 +475,7 @@
             top: 200px;
         }
 
-        @include mxw($sm) {
+        @include mxw($md) {
             &::after {
                 top: 90px;
             }
@@ -524,7 +524,7 @@
         @include mxw($lg) {
             font-size: 48px;
             line-height: 78px;
-            padding-left: 20px;
+            padding: 20px 0 30px 66px;
         }
 
         @include mxw($sm) {

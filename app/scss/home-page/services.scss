@@ -95,8 +95,6 @@
     }
 
     &__table-text {
-
-
         p {
             @include line-clamp(2);
             word-break: normal;
