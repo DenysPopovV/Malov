@@ -67,6 +67,7 @@
     }
 
     &__table-item {
+
         z-index: 5;
         display: flex;
         align-items: center;
@@ -81,6 +82,8 @@
         }
 
         &__span {
+            @include line-clamp(4);
+            word-break: normal;
             font-weight: 400;
             font-size: 16px;
             line-height: 20px;
@@ -94,6 +97,7 @@
         @include mxw($lg) {
             border-top: 1px solid $border;
             width: 100%;
+
 
             &:nth-child(1),
             &:nth-child(2),
@@ -158,6 +162,7 @@
                 grid-row-start: 6;
                 grid-row-end: 7;
             }
+
         }
     }
 

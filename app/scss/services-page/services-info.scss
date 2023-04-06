@@ -479,6 +479,8 @@
             &::after {
                 top: 90px;
             }
+            height: 70%;
+            overflow-y: auto;
         }
     }
 
@@ -543,6 +545,9 @@
 
         @include mxw($sm) {
             margin-bottom: 0;
+            // height: 800px;
+            // display: grid;
+            // place-items: center;
         }
     }
 

@@ -61,7 +61,6 @@
         }
 
         @include mxw($xs) {
-            // padding-right: 10px;
             padding: 10px 10px 10px 77px;
         }
 
@@ -150,17 +149,15 @@
     }
 
     &__tabs-question {
-        padding: 10px;
-        @include mxw($lg) {
-            text-align: center;
 
-            span {
-                display: block;
+        p {
+            @include mxw($lg) {
+                text-align: center;
             }
-        }
 
-        @include mxw($md) {
-            text-align: right;
+            @include mxw($md) {
+                text-align: right;
+            }
         }
     }
 
