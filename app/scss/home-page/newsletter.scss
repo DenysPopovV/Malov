@@ -72,15 +72,17 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
+        
 
         @include mxw($xs) {
-            padding: 15px 200px 15px 16px;
+            padding: 15px 110px 15px 16px;
+            color: $white;
 
             &::placeholder {
+                color: $white;
                 font-size: 12px;
                 line-height: 15px;
             }
-
         }
     }
 

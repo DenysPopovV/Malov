@@ -1,8 +1,5 @@
-
-
-/////////////////blog page swiper/////////////////////
+/////////////////BLOG PAGE swiper/////////////////////
 const InfoSwiper = new Swiper('.swiper-info', {
-  // Optional parameters
   direction: 'horizontal',
   spaceBetween: 33,
   slidesPerView: 3,
@@ -14,7 +11,7 @@ const InfoSwiper = new Swiper('.swiper-info', {
     prevEl: '.blog-info__arrow-prev',
   },
 
-  breakpoints: {// настройки для разных разрешений
+  breakpoints: {
     360: {
       slidesPerView: 1.5,
       centeredSlides: true,
@@ -66,7 +63,6 @@ const InfoSwiper = new Swiper('.swiper-info', {
 });
 
 const InstSwiper = new Swiper('.swiper-inst', {
-  // Optional parameters
   direction: 'horizontal',
   spaceBetween: 33,
   slidesPerView: 3,
@@ -78,7 +74,7 @@ const InstSwiper = new Swiper('.swiper-inst', {
     prevEl: '.blog-inst__arrow-prev',
   },
 
-  breakpoints: {// настройки для разных разрешений
+  breakpoints: {
     360: {
       slidesPerView: 1.5,
       centeredSlides: true,
@@ -128,34 +124,42 @@ const InstSwiper = new Swiper('.swiper-inst', {
     }
   }
 });
-//////////////////////////////////////////////
-// const swiperContainer = document.querySelector('.swiper-container');
-// const swiperWrapper = swiperContainer.querySelector('.swiper-wrapper');
-// const swiperSlides = swiperWrapper.querySelectorAll('.swiper-slide');
-// const swiperPrevButton = swiperContainer.querySelector('.swiper-button-prev');
-// const swiperNextButton = swiperContainer.querySelector('.swiper-button-next');
-// let currentSlide = 0;
+////////////////////////////////////////////////////////////////////////
 
-// swiperSlides[currentSlide].classList.add('swiper-slide-active');
 
-// swiperPrevButton.addEventListener('click', () => {
-//   swiperSlides[currentSlide].classList.remove('swiper-slide-active');
-//   currentSlide--;
-//   if (currentSlide < 0) {
-//     currentSlide = swiperSlides.length - 1;
-//   }
-//   swiperSlides[currentSlide].classList.add('swiper-slide-active');
-// });
+///////////////////////////HOME PAGE reviews swiper///////////////////////////////////////
+const swiperContainer = document.querySelector('.reviews__swiper');
+if (swiperContainer) {
+  const swiperWrapper = swiperContainer.querySelector('.swiper-wrapper');
+  const swiperSlides = swiperWrapper.querySelectorAll('.swiper-slide');
+  const swiperPrevButton = swiperContainer.querySelector('.swiper-button-prev');
+  const swiperNextButton = swiperContainer.querySelector('.swiper-button-next');
+  let currentSlide = 0;
 
-// swiperNextButton.addEventListener('click', () => {
-//   swiperSlides[currentSlide].classList.remove('swiper-slide-active');
-//   currentSlide++;
-//   if (currentSlide >= swiperSlides.length) {
-//     currentSlide = 0;
-//   }
-//   swiperSlides[currentSlide].classList.add('swiper-slide-active');
-// });
+  swiperSlides[currentSlide].classList.add('swiper-slide-active');
 
+  swiperPrevButton.addEventListener('click', () => {
+    swiperSlides[currentSlide].classList.remove('swiper-slide-active');
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = swiperSlides.length - 1;
+    }
+    swiperSlides[currentSlide].classList.add('swiper-slide-active');
+  });
+
+  swiperNextButton.addEventListener('click', () => {
+    swiperSlides[currentSlide].classList.remove('swiper-slide-active');
+    currentSlide++;
+    if (currentSlide >= swiperSlides.length) {
+      currentSlide = 0;
+    }
+    swiperSlides[currentSlide].classList.add('swiper-slide-active');
+  });
+}
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////HOME PAGE HEADER Effect FIXED ////////////////////////////////////
 const menuFixed = document.querySelector('.header__box');
 const heroPadding = document.querySelector('.hero');
 
@@ -165,7 +169,10 @@ window.addEventListener('scroll', function () {
   menuFixed.classList.toggle('animation', scrollTop >= 200);
   menuFixed.classList.toggle('opacity', scrollTop >= 350);
 });
+////////////////////////////////////////////////////////////////////////////////////////
 
+
+/////////////////////////////////////HOME PAGE HEADER Effect SCROLL////////////////////
 $(function () {
   const headerHeight = $('.header__box').outerHeight();
 
@@ -191,7 +198,10 @@ $(function () {
     return false;
   });
 });
+////////////////////////////////////////////////////////////////////////////////////////
 
+
+//////////////////////////////////////SCRIPT for TABS EFFECT////////////////////////////////////////////////
 const tabBtn = document.querySelectorAll('.tab-btn');
 const tabsItems = document.querySelectorAll('.tab-item');
 const closeTabBtns = document.querySelectorAll('.close-tab-btn');
@@ -236,7 +246,6 @@ function onTabClick(item) {
           activeTabBtn.classList.remove('active');
           activeTab.classList.remove('active');
 
-          // remove 'lock' class from body if the tab does not have the 'active' class
           if (!document.querySelector('.tab-item.lock-body.active')) {
             document.body.classList.remove('lock');
           }
@@ -245,15 +254,31 @@ function onTabClick(item) {
     });
   });
 }
+//////////////////////////////////////////////////////////////////////////////////////
 
 
-
+///////////////////////////////////////CAREERS PAGE Tab-two OPEN////////////////////////////
 let openTab = document.querySelector('.careers-tabs__item:nth-child(2)>.careers-tabs__btn');
 if (openTab !== null) {
   openTab.click();
 }
+/////////////////////////////////////////////////////////////////////////////////////////
 
-let form = document.getElementById('form');
+
+////////////////////////////////////////PORTFOLIO PAGE SHOW MORE ////////////////////////////
+$(document).ready(function () {
+  $(".portfolio__list-item").slice(0, 6).show();
+  $("#loadMore").on("click", function (e) {
+    e.preventDefault();
+    $(".portfolio__list-item:hidden").slice(0, 3).slideDown();
+    if ($(".portfolio__list-item:hidden").length == 0) {
+      $("#loadMore").text("No Content").addClass("noContent");
+    }
+  });
+})
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////FORM CHECK//////////////////////////////////////////////
 let client = document.getElementById('client');
 let mail = document.getElementById('mail');
 let link = document.getElementById('link');
@@ -261,48 +286,38 @@ let question = document.getElementById('question');
 let success = document.getElementById('success');
 let danger = document.getElementById('danger');
 let close = document.getElementById('close');
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  function checkInputs() {
-    let mailValue = mail.value.trim();
-    let clientValue = client.value.trim();
-    let linkValue = link.value.trim();
-    let questionValue = question.value.trim();
-
-    if (mailValue === '' || clientValue === '' || linkValue === '' || questionValue === '') {
-      danger.style.display = 'block';
-    } else {
-      setTimeout(() => {
-        mailValue = '';
-        clientValue = '';
-        linkValue = '';
-        questionValue = '';
-      }, 2000);
-      danger.style.display = 'none';
-      success.classList.add('popup-form__fixed--active');
-    }
-    if (success.classList.contains('popup-form__fixed--active')) {
-      close.addEventListener("click", function () {
-        success.classList.remove('popup-form__fixed--active')
-      });
-    }
-
-  }
-  checkInputs();
-});
-
-
-$(document).ready(function(){
-  $(".portfolio__list-item").slice(0, 6).show();
-  $("#loadMore").on("click", function(e){
+let form = document.getElementById('form');
+if (form) {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    $(".portfolio__list-item:hidden").slice(0, 3).slideDown();
-    if($(".portfolio__list-item:hidden").length == 0) {
-      $("#loadMore").text("No Content").addClass("noContent");
+
+    function checkInputs() {
+      let mailValue = mail.value.trim();
+      let clientValue = client.value.trim();
+      let linkValue = link.value.trim();
+      let questionValue = question.value.trim();
+
+      if (mailValue === '' || clientValue === '' || linkValue === '' || questionValue === '') {
+        danger.style.display = 'block';
+      } else {
+        setTimeout(() => {
+          mailValue = '';
+          clientValue = '';
+          linkValue = '';
+          questionValue = '';
+        }, 2000);
+        danger.style.display = 'none';
+        success.classList.add('popup-form__fixed--active');
+      }
+      if (success.classList.contains('popup-form__fixed--active')) {
+        close.addEventListener("click", function () {
+          success.classList.remove('popup-form__fixed--active')
+        });
+      }
     }
+    checkInputs();
   });
-})
+}
+//////////////////////////////////////////////////////////////////////////////////////////////
 
 
