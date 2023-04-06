@@ -46,6 +46,14 @@
         margin-right: 40px;
         position: relative;
         cursor: pointer;
+
+        @include mxw($sm) {
+           margin-bottom: 10px;
+        }
+
+        @include mxw($xs) {
+            margin-right: 0;
+        }
     }
 
     &__main-img {
@@ -58,10 +66,6 @@
         @include mxw($lg) {
             width: 413px;
             height: 304px;
-        }
-
-        @include mxw($sm) {
-            margin-bottom: 10px;
         }
 
         @include mxw($xs) {
@@ -142,6 +146,7 @@
 
         &:hover {
             .blog-info__swiper-hover {
+
                 &::after,
                 &::before {
                     opacity: 1;

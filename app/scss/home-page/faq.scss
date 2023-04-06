@@ -11,6 +11,7 @@
         padding-top: 50px;
         padding-bottom: 50px;
     }
+
     &__title {
         margin-bottom: 73px;
 
@@ -60,9 +61,10 @@
         }
 
         @include mxw($xs) {
-            padding-right: 10px;
-            padding: 10px 10px 10px 77px; 
+            // padding-right: 10px;
+            padding: 10px 10px 10px 77px;
         }
+
     }
 
     &__tabs-head {
@@ -77,6 +79,10 @@
 
         @include mxw($md) {
             height: 57px;
+        }
+
+        @include mxw($xs) {
+            height: 47px;
         }
     }
 
@@ -147,10 +153,12 @@
         padding: 10px;
         @include mxw($lg) {
             text-align: center;
+
             span {
                 display: block;
             }
         }
+
         @include mxw($md) {
             text-align: right;
         }
@@ -158,8 +166,10 @@
 
     &__tabs-content {
         max-width: 1008px;
+
         p {
             margin-bottom: 20px;
+
             span {
                 display: block;
                 margin-bottom: 5px;

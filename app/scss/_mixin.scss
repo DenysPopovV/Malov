@@ -1,9 +1,11 @@
-@mixin line-clamp($lines:1) {
+@mixin line-clamp($lines: 1) {
     @if $lines <=1 {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-    } @else {
+    }
+
+    @else {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -21,5 +23,21 @@ $vlg: 1465;
 @mixin mxw($width) {
     @media (max-width: #{$width}px) {
         @content;
-    }    
+    }
+}
+
+@mixin line-clamp($lines: 1) {
+    @if $lines <=1 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    @else {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $lines;
+        -webkit-box-orient: vertical;
+    }
 }
