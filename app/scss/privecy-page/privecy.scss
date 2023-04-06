@@ -1,0 +1,33 @@
+.privecy {
+    padding-top: 170px;
+
+    @include mxw($xs) {
+       padding-top: 110px;
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 78px;
+        margin-bottom: 50px;
+
+        @include mxw($xs) {
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 35px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 195px;
+        p {
+            @include mxw($sm) {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+
+    }
+}

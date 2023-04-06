@@ -185,7 +185,10 @@
 
     &__swiper-info {
         p {
+            @include line-clamp(3);
+            word-break: normal;
             margin-bottom: 25px;
+            min-height: 54px;
 
             @include mxw($md) {
                 font-size: 20px;

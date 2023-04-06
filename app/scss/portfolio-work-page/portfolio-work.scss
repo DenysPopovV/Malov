@@ -23,6 +23,7 @@
         p {
             margin-bottom: 40px;
 
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -149,6 +150,14 @@
 
         @include mxw($vlg) {
             margin-bottom: 60px;
+        }
+
+        @include mxw($lg) {
+            p {
+                @include line-clamp(4);
+                word-break: break-all;
+                min-height: 50px;
+            }
         }
 
         @include mxw($md) {
@@ -461,6 +470,7 @@
 
         @include mxw($md) {
             transform: rotate(-17deg);
+
             &::after {
                 width: 250px;
                 height: 320px;
