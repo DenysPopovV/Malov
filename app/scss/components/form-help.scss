@@ -40,6 +40,8 @@
     &__form-name {
         margin-bottom: 44px;
 
+        
+
         @include mxw($xs) {
             margin-bottom: 30px;
         }
@@ -77,15 +79,19 @@
             }
         }
 
-        &:nth-child(1),
-        &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(4) {
-            @include mxw($sm) {
-                max-width: 100%;
+        @include mxw($sm) {
+
+            &:nth-child(n) {
+                max-width: 90%;
                 margin-right: 0;
             }
+
+            &:nth-child(4) {
+                max-width: 100%;
+            }
+            
         }
+
     }
 
     &__form-side {
@@ -96,6 +102,7 @@
         width: 100%;
 
         @include mxw($xs) {
+            padding: 0 0 3px 5px;
             font-size: 10px;
             line-height: 12px;
         }
@@ -154,14 +161,6 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-
-        @include mxw($vlg) {
-            transform: translateX(100px);
-        }
-
-        @include mxw($md) {
-            transform: translateX(0);
-        }
     }
 
     &__danger {

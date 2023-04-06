@@ -86,6 +86,14 @@
         }
     }
 
+    &__social-link {
+        @include mxw($xs) {
+            &::after {
+                width: 22px;
+            }
+        }
+    }
+
     &__location {
         order: 2;
 

@@ -150,6 +150,7 @@
     }
 
     &__tabs-question {
+        padding: 10px;
         @include mxw($lg) {
             text-align: center;
 
