@@ -54,14 +54,15 @@
     }
 
     &__tabs-box {
+        width: 100%;
         padding: 25px 77px 25px 114px;
 
         @include mxw($md) {
-            padding-right: 10px;
+            padding: 25px 10px 25px 50px;
         }
 
         @include mxw($xs) {
-            padding: 10px 10px 10px 77px;
+            padding: 10px 10px 10px 30px;
         }
 
     }
@@ -70,7 +71,6 @@
         height: 70px;
         position: relative;
         display: flex;
-        justify-content: center;
         align-items: center;
 
         @include mxw($md) {
@@ -82,25 +82,18 @@
         }
 
         @include mxw($xs) {
-            height: 47px;
+            height: 30px;
+
         }
     }
 
     &__tabs-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: -50px;
         width: 24px;
         height: 24px;
         display: flex;
         justify-content: center;
         align-items: center;
-
-        @include mxw($xs) {
-            left: 40px;
-            top: 28px;
-        }
+        margin-right: 10px;
 
         &::after,
         &::before {
@@ -151,6 +144,8 @@
     }
 
     &__tabs-question {
+        width: 100%;
+        text-align: center;
 
         p {
             @include mxw($lg) {
@@ -164,7 +159,8 @@
     }
 
     &__tabs-content {
-        max-width: 1008px;
+        height: 0;
+        transition: transform .4s linear, max-height .6s linear, height .7s linear;
 
         p {
             margin-bottom: 20px;
@@ -173,6 +169,10 @@
                 display: block;
                 margin-bottom: 5px;
             }
+        }
+        &.active{
+            max-height: 1000px;
+            height: 100%;
         }
     }
 }
