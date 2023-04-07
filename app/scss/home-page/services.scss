@@ -96,7 +96,7 @@
 
     &__table-text {
         p {
-            @include line-clamp(2);
+            @include line-clamp(3);
             word-break: normal;
             min-height: 74px;
             font-weight: 600;
