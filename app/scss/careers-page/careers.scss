@@ -82,23 +82,37 @@
         }
     }
 
-    &__text {
+    &__head {
         padding: 31px 30px 31px 10px;
-        width: 100%;
-        text-align: center;
-
-        @include mxw($md) {
-            text-align: left;
-        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         @include mxw($xs) {
             padding: 15px 10px 15px 10px;
         }
     }
 
+    &__text {
+        text-align: center;
+        width: 100%;
+
+        @include mxw($md) {
+            text-align: left;
+        }
+        @include mxw($xs) {
+            p {
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+
     &__btn {
-        position: absolute;
-        top: 28px;
-        right: 90px;
+        position: relative;
+        display: block;
+        // top: 28px;
+        // right: 90px;
         width: 20px;
         height: 35px;
 
@@ -120,15 +134,9 @@
             transform: rotate(180deg);
         }
 
-        @include mxw($md) {
-            right: 10px;
-        }
-
         @include mxw($xs) {
-            top: 12px;
             width: 10px;
             height: 20px;
-            right: 0px;
         }
     }
 

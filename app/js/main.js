@@ -258,7 +258,7 @@ function onTabClick(item) {
 
 
 ///////////////////////////////////////CAREERS PAGE Tab-two OPEN////////////////////////////
-let openTab = document.querySelector('.careers-tabs__item:nth-child(2)>.careers-tabs__btn');
+let openTab = document.querySelector('.careers-tabs__item:nth-child(2)>.careers-tabs__head>.careers-tabs__btn');
 if (openTab !== null) {
   openTab.click();
 }

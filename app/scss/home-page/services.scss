@@ -1,5 +1,6 @@
 .services {
     padding-bottom: 150px;
+    overflow: hidden;
 
     @include mxw($sm) {
         padding-bottom: 100px;
@@ -32,7 +33,12 @@
         grid-template-columns: repeat(3, 1fr);
         border: 1px solid $border;
         position: relative;
-        z-index: 3;
+
+        &::after {
+            right: 0;
+            transform: translateX(400px);
+            top: 100px;
+        }
 
         @include mxw($sm) {
             grid-template-columns: repeat(2, 1fr);
@@ -41,6 +47,7 @@
 
 
     &__table-item {
+        z-index: 3;
         padding: 10px;
         text-align: center;
         position: relative;

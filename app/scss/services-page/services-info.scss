@@ -399,7 +399,7 @@
         @include mxw($md) {
             justify-content: flex-start;
         }
-        
+
     }
 
     &__danger {
@@ -475,12 +475,15 @@
             top: 200px;
         }
 
-        @include mxw($md) {
+        @include mxw($vlg) {
+            height: 70%;
+            overflow-y: auto;
+        }
+
+        @include mxw($lg) {
             &::after {
                 top: 90px;
             }
-            height: 70%;
-            overflow-y: auto;
         }
     }
 
@@ -525,6 +528,9 @@
             font-size: 48px;
             line-height: 78px;
             padding: 20px 0 30px 66px;
+        }
+        @include mxw($md) {
+            padding: 20px 0 30px 40px;
         }
 
         @include mxw($sm) {

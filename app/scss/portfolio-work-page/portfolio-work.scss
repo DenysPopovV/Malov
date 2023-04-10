@@ -49,6 +49,12 @@
 
         @include mxw($vlg) {
             margin-bottom: 60px;
+            min-height: 500px;
+        }
+
+        @include mxw($lg) {
+            margin-bottom: 60px;
+            min-height: 590px;
         }
 
         @include mxw($md) {
