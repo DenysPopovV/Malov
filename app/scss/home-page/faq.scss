@@ -87,26 +87,12 @@
     }
 
     &__tabs-btn {
-<<<<<<< HEAD
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 50px;
-=======
->>>>>>> 33ade084b9dc78db63e539d038c88484b71efc66
         width: 24px;
         height: 24px;
         display: flex;
         justify-content: center;
         align-items: center;
-<<<<<<< HEAD
-
-        @include mxw($xs) {
-            left: 40px;
-        }
-=======
         margin-right: 10px;
->>>>>>> 33ade084b9dc78db63e539d038c88484b71efc66
 
         &::after,
         &::before {

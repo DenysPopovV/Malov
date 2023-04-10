@@ -38,6 +38,10 @@
             right: 0;
             transform: translateX(400px);
             top: 100px;
+
+            @include mxw($xs) {
+                transform: translateX(100px);
+            }
         }
 
         @include mxw($sm) {
