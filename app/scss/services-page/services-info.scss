@@ -589,13 +589,15 @@
     }
 
     &__card-media {
-        width: 160px;
         display: flex;
-        justify-content: space-between;
 
         @include mxw($sm) {
             display: none;
         }
+    }
+
+    &__icons-item {
+        margin-right: 15px;
     }
 
     &__card-scope {

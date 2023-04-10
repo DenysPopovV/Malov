@@ -68,7 +68,6 @@
 
     &__tabs-head {
         height: 70px;
-        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -90,7 +89,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: -50px;
+        left: 50px;
         width: 24px;
         height: 24px;
         display: flex;
@@ -99,7 +98,6 @@
 
         @include mxw($xs) {
             left: 40px;
-            top: 28px;
         }
 
         &::after,
@@ -153,6 +151,7 @@
     &__tabs-question {
 
         p {
+            font-weight: 600;
             @include mxw($lg) {
                 text-align: center;
             }
