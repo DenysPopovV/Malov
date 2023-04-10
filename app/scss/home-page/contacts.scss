@@ -39,7 +39,7 @@
 
         @include mxw($vlg) {
             margin-bottom: 40px;
-            justify-content: space-between;
+            justify-content: flex-end;
         }
 
         @include mxw($md) {
@@ -535,6 +535,19 @@
         @include mxw($xs) {
             font-size: 11px;
             line-height: 13px;
+        }
+    }
+
+    &__icons-box {
+        display: flex;
+        align-items: center;
+
+        a {
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
 
