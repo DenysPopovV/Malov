@@ -319,5 +319,37 @@ if (form) {
   });
 }
 //////////////////////////////////////////////////////////////////////////////////////////////
+// $('#noscroll').click(function (e) {
+//   e.preventDefault()
+//   /*dome code here*/       
+// });
 
+let email = document.getElementById('email');
+let formMail = document.getElementById('formMail');
+
+if (formMail) {
+  formMail.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    function checkMail() {
+      let emailValue = email.value.trim();
+      
+      if (emailValue === '') {
+        danger.style.display = 'block';
+      } else {
+        setTimeout(() => {
+          emailValue = '';
+        }, 2000);
+        danger.style.display = 'none';
+        success.classList.add('popup-form__fixed--active');
+      }
+      if (success.classList.contains('popup-form__fixed--active')) {
+        close.addEventListener("click", function () {
+          success.classList.remove('popup-form__fixed--active')
+        });
+      }
+    }
+    checkMail();
+  });
+}
 

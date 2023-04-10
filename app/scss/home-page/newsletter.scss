@@ -56,6 +56,7 @@
         @include mxw($sm) {
             margin: 0 10px 10px 0;
         }
+
         @include mxw($xs) {
             margin: 0 0 10px 0;
         }
@@ -72,7 +73,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
-        
+
 
         @include mxw($xs) {
             padding: 15px 110px 15px 16px;
@@ -83,6 +84,14 @@
                 font-size: 12px;
                 line-height: 15px;
             }
+        }
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+            -webkit-box-shadow: set 20px 20px 0px 40px #f3f2eb;
+            -webkit-text-fill-color: white;
         }
     }
 
@@ -118,6 +127,7 @@
         border: 1px solid $accent;
         border-radius: 60px;
         height: 66px;
+
         @include mxw($xs) {
             padding: 10px 10px;
             height: 42px;
@@ -164,6 +174,7 @@
             width: 40px;
             height: 40px;
             background-image: url('../images/sprite.svg#contacts-up');
+
             @include mxw($xs) {
                 width: 30px;
                 height: 30px;
