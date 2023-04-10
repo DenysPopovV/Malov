@@ -267,7 +267,7 @@ if (openTab !== null) {
 
 ////////////////////////////////////////PORTFOLIO PAGE SHOW MORE ////////////////////////////
 $(document).ready(function () {
-  $(".portfolio__list-item").slice(0, 6).show();
+  $(".portfolio__list-item").slice(0, 3).show();
   $("#loadMore").on("click", function (e) {
     e.preventDefault();
     $(".portfolio__list-item:hidden").slice(0, 3).slideDown();

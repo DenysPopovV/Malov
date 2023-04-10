@@ -33,6 +33,7 @@
         grid-template-columns: repeat(3, 1fr);
         border: 1px solid $border;
         position: relative;
+        margin-bottom: 50px;
 
         &::after {
             right: 0;
@@ -129,6 +130,48 @@
                 line-height: 15px;
                 min-height: 30px;
             }
+        }
+    }
+
+    &__btn-more {
+        display: inline-block;
+        z-index: 1;
+        position: relative;
+        overflow: hidden;
+        padding: 15px 41px;
+        font-size: 16px;
+        color: $border;
+        background-color: transparent;
+        border: 1px solid $border;
+        transition: all 0.3s ease-in;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 55%;
+            transform: translateX(-50%) scaleY(1) scaleX(1.45);
+            top: 180%;
+            width: 160%;
+            height: 190%;
+            background-color: $border;
+            border-radius: 50%;
+            display: block;
+            transition: all 0.4s 0.2s cubic-bezier(0.55, 0, 0.1, 1);
+            z-index: -1;
+        }
+
+        &:hover {
+            color: $white;
+            border: 1px solid $white;
+        }
+
+        &:hover::after {
+            top: -45%;
+            background-color: $border;
+        }
+
+        @include mxw($sm) {
+            padding: 9px 24px;
         }
     }
 }
