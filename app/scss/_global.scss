@@ -226,7 +226,7 @@ input {
         background-image: url('../images/sprite.svg#ellipse-btn');
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 160px 154px;
+        background-size: 140px 154px;
         transition: transform .3s linear;
     }
 
@@ -333,7 +333,7 @@ input {
         transform: translate(-50%, -50%);
         opacity: 0;
         z-index: 1;
-        background-image: url('../images/icons/blog-arrow-hover.svg');
+        background-image: url('../images/sprite.svg#blog-arrow-hover');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
