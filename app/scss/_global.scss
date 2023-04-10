@@ -213,7 +213,6 @@ input {
     line-height: 20px;
     padding: 13px 40px 17px;
     position: relative;
-    margin-right: 80px;
 
     &::after,
     &::before {
@@ -244,10 +243,6 @@ input {
         &::before {
             transform: rotate(-2deg);
         }
-    }
-
-    @include mxw($md) {
-        margin-right: 0;
     }
 
 }

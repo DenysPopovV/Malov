@@ -59,10 +59,34 @@
     &__button {
         padding: 13px 40px 13px;
 
+
         &::after,
         &::before {
             top: 0;
+            background-image: url('../images/sprite.svg#ellipse-btn-big');
+            background-size: 270px 270px;
         }
+
+        &::after {
+            transform: rotate(2deg);
+        }
+
+        &::before {
+            transform: rotate(6deg);
+        }
+
+        &:hover {
+
+            &::after,
+            &::before {
+                transform: rotate(4deg);
+            }
+        }
+
+        @include mxw($md) {
+            font-size: 12px;
+        }
+
         @include mxw($sm) {
             display: none;
         }
@@ -93,6 +117,10 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
+
+        @include mxw($md) {
+            font-size: 12px;
+        }
 
     }
 }
@@ -221,7 +249,11 @@
     &__bottom {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    &__bottom-box {
+        margin-bottom: 20px;
     }
 
     &__social {
@@ -252,19 +284,42 @@
 
     &__connect {
         color: $white;
-        width: 172px;
-        height: 54px;
+        width: 100%;
+        height: 100%;
         padding: 13px 40px 17px;
         text-align: center;
         font-size: 14px;
         line-height: 30px;
 
+
         &::after,
         &::before {
-            top: 1px;
+            background-image: url('../images/sprite.svg#ellipse-btn-big');
+            top: -2px;
             filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(212deg) brightness(111%) contrast(101%);
-            background-size: 170px 175px;
+            background-size: 270px 270px;
         }
+
+        &::after {
+            transform: rotate(2deg);
+        }
+
+        &::before {
+            transform: rotate(6deg);
+        }
+
+        &:hover {
+
+            &::after,
+            &::before {
+                transform: rotate(4deg);
+            }
+        }
+
+        @include mxw($md) {
+            font-size: 12px;
+        }
+
     }
 
 }
