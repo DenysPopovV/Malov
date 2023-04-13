@@ -98,6 +98,12 @@ input {
         filter: blur(105px);
         z-index: 1;
     }
+
+    @include mxw($xs) {
+        &::after {
+            min-height: 346px;
+        }
+    }
 }
 
 .button__arrow {
