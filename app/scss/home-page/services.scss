@@ -42,11 +42,25 @@
 
             @include mxw($xs) {
                 transform: translateX(100px);
+                border: transparent;
             }
         }
 
         @include mxw($sm) {
             grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mxw($xs) {
+            border: transparent;
+            border-top: 1px solid $border;
+            border-left: 1px solid $border;
+            border-bottom: 1px solid $border;
+
+            &::after{
+                display: none;
+                // top: 50px;
+                // min-height: 200px;
+            }
         }
     }
 
@@ -78,6 +92,37 @@
 
         @include mxw($xs) {
             min-height: 200px;
+            border: transparent;
+
+            &:nth-child(1) {
+                border-right: 1px solid $border;
+            }
+
+            &:nth-child(2) {
+                border-right: 1px solid $border;
+            }
+
+            &:nth-child(3) {
+                border-top: 1px solid $border;
+                border-right: 1px solid $border;
+            }
+
+            &:nth-child(4) {
+                border-top: 1px solid $border;
+                border-right: 1px solid $border;
+            }
+
+            &:nth-child(5) {
+                border-top: 1px solid $border;
+                border-right: 1px solid $border;
+
+            }
+
+            &:nth-child(6) {
+                border-top: 1px solid $border;
+                border-right: 1px solid $border;
+
+            }
         }
     }
 
