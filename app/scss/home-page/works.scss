@@ -88,27 +88,29 @@
         }
     }
 
-    &__list-img {
-        width: 290px;
-        height: 566px;
-        border-radius: 30px;
-        box-shadow: -92px 215px 94px rgba(0, 0, 0, 0.01),
-            -52px 121px 79px rgba(0, 0, 0, 0.05),
-            -23px 54px 59px rgba(0, 0, 0, 0.09),
-            -6px 13px 32px rgba(0, 0, 0, 0.1),
-            0px 0px 0px rgba(0, 0, 0, 0.1);
-        object-fit: cover;
-        cursor: pointer;
-
-        @include mxw($lg) {
-            width: 218px;
-            height: 426px;
-        }
-
-        @include mxw($xs) {
-            width: 116px;
-            height: 227px;
-            border-radius: 10px;
+    &__list-link { 
+        img {
+            width: 290px;
+            height: 566px;
+            border-radius: 30px;
+            box-shadow: -92px 215px 94px rgba(0, 0, 0, 0.01),
+                -52px 121px 79px rgba(0, 0, 0, 0.05),
+                -23px 54px 59px rgba(0, 0, 0, 0.09),
+                -6px 13px 32px rgba(0, 0, 0, 0.1),
+                0px 0px 0px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            cursor: pointer;
+    
+            @include mxw($lg) {
+                width: 218px;
+                height: 426px;
+            }
+    
+            @include mxw($xs) {
+                width: 116px;
+                height: 227px;
+                border-radius: 10px;
+            }
         }
     }
 
