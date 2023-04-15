@@ -18,15 +18,26 @@
         margin-bottom: 25px;
     }
 
-    &__box{
+    &__box {
         max-height: 1400px;
         overflow-y: auto;
         margin-bottom: 100px;
         padding-right: 50px;
+        @include mxw($md) {
+            margin-bottom: 50px;
+
+        }
+
+        @include mxw($sm) {
+            margin-bottom: 50px;
+            max-height: 800px;
+            padding-right: 20px;
+        }
     }
 
     &__text {
         margin-bottom: 45px;
+
         p {
             margin-bottom: 15px;
 
@@ -36,20 +47,59 @@
         }
     }
 
-    &__photos{
+    &__photos {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin-bottom: 50px;
+
+        @include mxw($vlg) {
+            justify-content: space-around;
+        }
+
+        @include mxw($lg) {
+            justify-content: space-between;
+        }
+
+        @include mxw($md) {
+            justify-content: center;
+        }
     }
 
-    &__pictures{
-        width: 665px;
+    &__pictures {
+        max-width: 625px;
+        width: 100%;
         height: 587px;
         background-color: #aaa;
-        margin-bottom: 50px;
-        &:nth-child(1){
-            width: 100%;
-            margin-bottom: 20px;
+        margin-bottom: 20px;
+
+        &:nth-child(1) {
+            max-width: 100%;
+            margin-bottom: 90px;
+        }
+
+        @include mxw($vlg) {
+            max-width: 400px;
+            height: 376px;
+        }
+
+        @include mxw($md) {
+            max-width: 400px;
+            height: 376px;
+
+            &:nth-child(1) {
+                margin-bottom: 20px;
+            }
+
+            &:nth-child(2) {
+                margin-right: 10px;
+            }
+        }
+
+        @include mxw($sm) {
+            &:nth-child(2) {
+                margin-right: 0;
+            }
         }
     }
 }
