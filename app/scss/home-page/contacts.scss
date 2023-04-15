@@ -549,6 +549,10 @@
                 margin-right: 0;
             }
         }
+
+        @include mxw($xs) {
+            justify-content: center;
+        }
     }
 
     &__social {

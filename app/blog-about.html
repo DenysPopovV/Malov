@@ -16,47 +16,50 @@
     <div class="container">
         <div class="header__absolute">
             <div class="header__box">
-                <a class="header__logo" href="index.html">
-                    <img src="images/logo.svg" alt="Logo of company">
-                </a>
-                <nav class="header__menu">
-                    <ul class="header__menu-list">
-                        <li class="header__menu-item">
-                            <a class="header__menu-link" href="portfolio.html">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a class="header__menu-link" href="index.html#contact">
-                                Contacts
-                            </a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a class="header__menu-link" href="services.html">
-                                Services
-                            </a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a class="header__menu-link" href="blog.html">
-                                Blog
-                            </a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a class="header__menu-link" href="careers.html">
-                                Careers
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="header__center-fix">
+                    <a class="header__logo" href="index.html">
+                        <img src="images/logo.svg" alt="Logo of company">
+                    </a>
+                    <nav class="header__menu">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item">
+                                <a class="header__menu-link" href="portfolio.html">
+                                    Portfolio
+                                </a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a class="header__menu-link" href="index.html#contact">
+                                    Contacts
+                                </a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a class="header__menu-link" href="services.html">
+                                    Services
+                                </a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a class="header__menu-link" href="blog.html">
+                                    Blog
+                                </a>
+                            </li>
+                            <!-- <li class="header__menu-item">
+                                <a class="header__menu-link" href="careers.html">
+                                    Careers
+                                </a>
+                            </li> -->
+                        </ul>
+                    </nav>
 
-                <a class="header__button hover__btn" href="https://calendly.com/hello-malovv/free-ecommerce-consultation-malovv" target="_blank">
-                    Book a free consultation
-                </a>
+                    <a class="header__button hover__btn"
+                        href="https://calendly.com/hello-malovv/free-ecommerce-consultation-malovv" target="_blank">
+                        Book a free consultation
+                    </a>
 
-                <button class="header-mobile__open tab-btn" data-tab="#tab_1">
-                    <span></span>
-                    <p class="sr-only">Button open mobile menu</p>
-                </button>
+                    <button class="header-mobile__open tab-btn" data-tab="#tab_1">
+                        <span></span>
+                        <p class="sr-only">Button open mobile menu</p>
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -94,11 +97,11 @@
                             Blog
                         </a>
                     </li>
-                    <li class="header-mobile__item">
+                    <!-- <li class="header-mobile__item">
                         <a class="header-mobile__link close-tab-btn" href="careers.html">
                             Careers
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </nav>
             <div class="header-mobile__bottom">
@@ -106,18 +109,22 @@
                     <a class="header-mobile__social social__icons social__icons--inst" href="#" target="_blank">
                         <span class="sr-only">link to open Instagram</span>
                     </a>
-                    <a class="header-mobile__social social__icons social__icons--up" href="https://www.upwork.com/freelancers/~0113492577ec937949?s=1017484851352698949" target="_blank">
+                    <a class="header-mobile__social social__icons social__icons--up"
+                        href="https://www.upwork.com/freelancers/~0113492577ec937949?s=1017484851352698949"
+                        target="_blank">
                         <span class="sr-only">link to open Upwork</span>
                     </a>
                 </div>
-                <a class="header-mobile__connect hover__btn close-tab-btn" href="https://calendly.com/hello-malovv/free-ecommerce-consultation-malovv" target="_blank">Book a free consultation</a>
+                <a class="header-mobile__connect hover__btn close-tab-btn"
+                    href="https://calendly.com/hello-malovv/free-ecommerce-consultation-malovv" target="_blank">Book a
+                    free consultation</a>
             </div>
         </div>
     </div>
 </header>
 
         <main class="main">
-            
+
             <section class="breadcrumbs">
     <div class="container">
         <div class="breadcrumbs__box" style="background-image: url('images/logo.svg');">
@@ -132,7 +139,7 @@
         </div>
     </div>
 </section>
-            
+
             <section class="blog-about">
     <div class="blog-about__img">
         <img src="images/blog-page/popup-bg.jpg" alt="main blog image">
@@ -226,8 +233,94 @@
 
     </div>
 </section>
-            
-           
+
+            <section class="blog-article">
+    <div class="blog-article__bg">
+        <div class="container">
+            <div class="blog-article__box">
+                <div class="blog-article__item">
+                    <div class="blog-article__text">
+                        <p>
+                            This is a unique opportunity to receive the latest news and valuable information about our
+                            business directly to your email. As a subscriber, you will have access
+                            to exclusive content such as special offers
+                            and discounts, useful tips and informative articles.
+                        </p>
+                    </div>
+                    <form class="blog-article__form" id="formMail">
+                        <label class="blog-article__type" for="mail">
+                            <input class="blog-article__mail" type="email" name="email" id="email" placeholder="E-mail"
+                                required>
+                        </label>
+                        <button class="blog-article__btn" type="submit">Send</button>
+                    </form>
+
+                </div>
+                <div class="blog-article__item">
+                    <h5 class="blog-article__title">
+                        Latest articles
+                    </h5>
+
+                    <ul class="blog-article__list">
+                        <li class="blog-article__list-item">
+                            <div class="blog-article__list-text">
+                                <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </li>
+                        <li class="blog-article__list-item">
+                            <a class="blog-article__list-link" href="#">
+                                <div class="blog-article__list-text">
+                                    <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="blog-article__list-item">
+                            <a class="blog-article__list-link" href="#">
+                                <div class="blog-article__list-text">
+                                    <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="blog-article__list-item">
+                            <a class="blog-article__list-link" href="#">
+                                <div class="blog-article__list-text">
+                                    <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="blog-article__list-item">
+                            <a class="blog-article__list-link" href="#">
+                                <div class="blog-article__list-text">
+                                    <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="blog-article__list-item">
+                            <a class="blog-article__list-link" href="#">
+                                <div class="blog-article__list-text">
+                                    <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="blog-article__list-item">
+                            <a class="blog-article__list-link" href="#">
+                                <div class="blog-article__list-text">
+                                    <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         </main>
 
     <footer class="footer">
@@ -311,8 +404,8 @@
         </div>
 
 </footer>
-        
-        
+
+
         <script src="js/main.min.js"></script>
 
 

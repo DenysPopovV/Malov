@@ -1,12 +1,24 @@
 .portfolio-work {
     overflow: hidden;
 
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 30px;
+        color: #6d6d6d;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
     &__name {
         display: block;
         font-weight: 600;
         font-size: 64px;
         line-height: 78px;
-        margin-bottom: 30px;
+        color: $text;
 
         @include mxw($md) {
             font-size: 24px;
